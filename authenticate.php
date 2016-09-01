@@ -1,6 +1,6 @@
 <?php // Controller for registration/login
 //authenticate.php
-session_start();
+
 
 // Should have form inputs
 if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['task'])) {
