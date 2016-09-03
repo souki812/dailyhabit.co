@@ -1,0 +1,51 @@
+use cs332;
+
+drop table if exists users;
+
+
+create table users (
+	first VARCHAR(255) NOT NULL,
+	last VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	gender VARCHAR(16) NOT NULL,
+    age INT NOT NULL,
+	biography VARCHAR(255),
+	progress INT NOT NULL,
+	picture  VARCHAR(255),
+	admin INT,
+	user_id INT AUTO_INCREMENT PRIMARY KEY
+);
+alter table users add UNIQUE KEY(email);
+
+create table newsfeed (
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL,
+	comment VARCHAR(255) NOT NULL,
+	friend_id INT,
+	comment_id INT AUTO_INCREMENT PRIMARY KEY 
+);
+
+
+create table current(
+	current VARCHAR(255),
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL,
+	current_id INT AUTO_INCREMENT PRIMARY KEY 
+);
+
+create table future(
+	future VARCHAR(255),
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL,
+	future_id INT AUTO_INCREMENT PRIMARY KEY 
+);
+
+create table achieved(
+	achieved VARCHAR(255),
+	time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	user_id INT NOT NULL,
+	achieved_id INT AUTO_INCREMENT PRIMARY KEY 
+);
+
+
