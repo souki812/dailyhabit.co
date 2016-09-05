@@ -13,7 +13,7 @@ function databaseConnection() {
 
 
         $db = mysqli_connect("localhost", "souki", "souki", "dailyhabit" );
-
+        echo $db;
         /*
         $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // For development only
