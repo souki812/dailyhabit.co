@@ -12,15 +12,19 @@ function databaseConnection() {
     try {
 
 
-        $db = mysqli_connect("localhost", "souki", "souki", "dailyhabit" );
+        //$db = mysql_connect("107.180.26.70", "souki", "souki", "dailyhabit" );
+
+       // $con = mysql_connect("localhost", "souki", "souki");
+
+      //  mysql_select_db("dailyhabit", $con);
+
         
-        /*
-        $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+        $db = new PDO("mysql:host="localhost";dbname="dailyhabit";charset=utf8", "souki", "souki");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // For development only
         $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
 
-        */
+    
         return $db;
     }
     
