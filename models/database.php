@@ -6,13 +6,21 @@ function databaseConnection() {
    
     
     // Connection parameters
-    require_once('../mysql.php');
+  //  require_once('../mysql.php');
     
     // Attempt connection
     try {
+
+
+        $db = mysqli_connect("localhost", "souki", "souki", "dailyhabit" );
+
+        /*
         $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // For development only
         $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
+
+        */
         return $db;
     }
     
@@ -23,3 +31,4 @@ function databaseConnection() {
     }
 }
 
+?>
