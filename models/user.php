@@ -15,12 +15,12 @@ class User {
     
     // Attempt to add this user and return whether it worked
     function register($first, $last, $email, $password, $gender, $age, $admin) {
-        $hash = password_hash($password, PASSWORD_DEFAULT);
+        //$hash = password_hash($password, PASSWORD_DEFAULT);
         $insert = $this->db->prepare('insert into users(first,last,email,password,gender,age,admin) values(:first,:last,:email,:password,:gender,:age,:admin)');
         $insert->bindParam(':first', $first, PDO::PARAM_STR);
         $insert->bindParam(':last', $last, PDO::PARAM_STR);
         $insert->bindParam(':email', $email, PDO::PARAM_STR);
-        $insert->bindParam(':password', $hash, PDO::PARAM_STR);
+        $insert->bindParam(':password', $password, PDO::PARAM_STR);
         $insert->bindParam(':gender', $gender, PDO::PARAM_STR);
         $insert->bindParam(':age', $age, PDO::PARAM_INT);
         $insert->bindParam(':admin', $admin, PDO::PARAM_INT);
@@ -172,7 +172,9 @@ class User {
         $select->execute();
         
         $row = $select->fetch(PDO::FETCH_ASSOC);
-        if (isset($row) && password_verify($password, $row['password'])) {
+       // if (isset($row) && password_verify($password, $row['password'])) {
+
+        if (isset($row) && $password == $row['password']) {
             return $row['user_id'];
         } else {
             return NULL;
