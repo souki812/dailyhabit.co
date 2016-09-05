@@ -19,7 +19,7 @@ function databaseConnection() {
       //  mysql_select_db("dailyhabit", $con);
 
         
-        $db = new PDO("mysql:host="localhost";dbname="dailyhabit";charset=utf8", "souki", "souki");
+        $db = new PDO("mysql:host=localhost:3306;dbname=dailyhabit;charset=utf8", "souki", "souki");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // For development only
         $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
