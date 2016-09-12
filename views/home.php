@@ -48,7 +48,7 @@
     </div>
    
    <!-- Adding a calendar -->
-
+    <br><br>
     <div class="row">
         <div class="col-md-8 col-md-offset-2  home" >
             <center>
@@ -58,7 +58,7 @@
 
             <div class="form-group">
                 <label>Have you achieved today's Habit?</label>
-               
+
             </div>
             </center>
         </div>
