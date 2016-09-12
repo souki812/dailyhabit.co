@@ -47,4 +47,20 @@
                         $('.progress-bar').css('width', '0%').attr('aria-valuenow', 0);
                         $("#progress1").html('0%');       
                   });
+
+                  $('#calendar').fullCalendar({
+                        dayClick: function() {
+                        alert('a day has been clicked!');
+                        }
+                  });
+
+
+
+
+
+
+
+
+
+
       });
