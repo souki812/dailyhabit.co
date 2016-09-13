@@ -55,7 +55,7 @@
                               right: 'month,agendaWeek,agendaDay'
                         },
                         defaultDate: '2014-06-12',
-                        defaultView: 'listMonth',
+                        defaultView: 'basicWeek',
                         editable: true,
 
 
@@ -64,10 +64,10 @@
                         } */
                   }); 
 
-                  var calendar = $('#calendar').fullCalendar('getCalendar');
+                  /*var calendar = $('#calendar').fullCalendar('getCalendar');
                   calendar.on('dayClick', function(date, jsEvent, view){
                         alert('Clicked on' + date.format());
-                  });
+                  }); */
 
 
 
