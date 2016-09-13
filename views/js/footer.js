@@ -61,18 +61,11 @@
                         height: 200
 
 
-                     /*   dayClick: function() {
-                        alert('a day has been clicked!');
-                        } */
-                  }); 
-
-                  var calendar = $('#calendar').fullCalendar('getCalendar');
-                  calendar.on('dayClick', function(date, jsEvent, view){
+                        dayClick: function(date, jsEvent, view) {
                         alert('Clicked on' + date.format());
+                        } 
                   }); 
 
-
-
-
+                 
 
       });
