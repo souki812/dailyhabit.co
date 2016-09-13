@@ -52,7 +52,7 @@
                         header: {
                               left: 'prev,next today',
                               center: 'title',
-                              right: 'month, agendaWeek, basicWeek'
+                              right: 'month, basicDay, basicWeek'
                         },
 
                         
@@ -66,10 +66,10 @@
                         } */
                   }); 
 
-                  /*var calendar = $('#calendar').fullCalendar('getCalendar');
+                  var calendar = $('#calendar').fullCalendar('getCalendar');
                   calendar.on('dayClick', function(date, jsEvent, view){
                         alert('Clicked on' + date.format());
-                  }); */
+                  }); 
 
 
 
