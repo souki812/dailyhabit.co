@@ -54,10 +54,24 @@
                               center: 'title',
                               right: 'month,agendaWeek,agendaDay'
                         },
+
+                        views: {
+                              agendaFourDay: {
+
+                              type: 'agenda',
+                              duration: { days: 4},
+                              buttonText: '4 day'
+                              }
+
+                             
+                        }
+
+
+                        /*
                         defaultDate: '2014-06-12',
                         defaultView: 'basicWeek',
                         editable: true,
-
+*/
 
                      /*   dayClick: function() {
                         alert('a day has been clicked!');
