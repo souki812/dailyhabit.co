@@ -48,16 +48,26 @@
                         $("#progress1").html('0%');       
                   });
 
-                  $('#calendar').fullCalendar({
-                        dayClick: function() {
+                 $('#calendar').fullCalendar({
+                        header: {
+                              left: 'prev,next today',
+                              center: 'title',
+                              right: 'month,agendaWeek,agendaDay'
+                        },
+                        defaultDate: '2014-06-12',
+                        defaultView: 'listMonth',
+                        editable: true,
+
+
+                     /*   dayClick: function() {
                         alert('a day has been clicked!');
-                        }
+                        } */
+                  }); 
+
+                  var calendar = $('#calendar').fullCalendar('getCalendar');
+                  calendar.on('dayClick', function(date, jsEvent, view){
+                        alert('Clicked on' + date.format());
                   });
-
-
-
-
-
 
 
 
