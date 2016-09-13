@@ -52,8 +52,11 @@
                         header: {
                               left: 'prev,next today',
                               center: 'title',
-                              right: 'month,agendaFourDay,'
+                              right: 'month, agendaWeek, agendaFourDay, listWeek, listDay'
                         },
+
+                        defaultView: 'listWeek',
+                        editable: true,
 
                         views: {
                               agendaFourDay: {
