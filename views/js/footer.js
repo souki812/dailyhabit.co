@@ -58,16 +58,8 @@
                         
                         defaultView: 'basicWeek',
                         editable: true,
+                        height: 300
 
-
-                        views: {
-                              basicWeek: {
-                                    type: 'basic',
-                                    duration: {weeks: 1},
-                                    rows: 1
-                              }
-                        }
-*/
 
                      /*   dayClick: function() {
                         alert('a day has been clicked!');
