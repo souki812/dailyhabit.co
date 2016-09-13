@@ -58,11 +58,15 @@
                         
                         defaultView: 'basicWeek',
                         editable: true,
-                        height: 200
+                        height: 200,
 
 
                         dayClick: function(date, jsEvent, view) {
-                        alert('Clicked on' + date.format());
+
+                              alert('Clicked on' + date.format());
+
+
+                              $(this).css('background-color', 'green');
                         } 
                   }); 
 
