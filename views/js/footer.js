@@ -52,28 +52,21 @@
                         header: {
                               left: 'prev,next today',
                               center: 'title',
-                              right: 'month, agendaWeek, agendaFourDay, listWeek, listDay'
+                              right: 'month, agendaWeek, basicWeek'
                         },
 
-                        defaultView: 'listWeek',
-                        editable: true,
-
-                        views: {
-                              agendaFourDay: {
-
-                              type: 'agenda',
-                              duration: { days: 4},
-                              buttonText: '4 day'
-                              }
-
-                             
-                        }
-
-
-                        /*
-                        defaultDate: '2014-06-12',
+                        
                         defaultView: 'basicWeek',
                         editable: true,
+
+
+                        views: {
+                              basicWeek: {
+                                    type: 'basic',
+                                    duration: {weeks: 1},
+                                    rows: 1
+                              }
+                        }
 */
 
                      /*   dayClick: function() {
