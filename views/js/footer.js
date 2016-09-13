@@ -58,7 +58,7 @@
                         
                         defaultView: 'basicWeek',
                         editable: true,
-                        height: 300
+                        height: 200
 
 
                      /*   dayClick: function() {
