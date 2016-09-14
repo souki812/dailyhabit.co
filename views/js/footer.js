@@ -65,7 +65,7 @@
                               var moment = $('#calendar').fullCalendar('getDate');
                               alert("The current date of the calendar is " + moment.format());
                               $(this).css('background-color', 'green');
-                        } 
+                        },
 
 
                         dayRender: function (date, cell) {
