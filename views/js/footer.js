@@ -71,8 +71,9 @@
                         dayRender: function (date, cell) {
                               if (date.isSame('2016-09-14')) {
                                     cell.css("background-color","red");
-        }
-                  }); 
+                        }
+                  } 
+                 }); 
 
           
 
