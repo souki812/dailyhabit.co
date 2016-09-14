@@ -66,6 +66,12 @@
                               alert("The current date of the calendar is " + moment.format());
                               $(this).css('background-color', 'green');
                         } 
+
+
+                        dayRender: function (date, cell) {
+                              if (date.isSame('2016-09-14')) {
+                                    cell.css("background-color","red");
+        }
                   }); 
 
           
