@@ -62,8 +62,9 @@
 
 
                         dayClick: function(date, jsEvent, view) {
+                              var d = date.getDate();
 
-                              alert('Clicked on' + date.format());
+                              alert('Clicked on' + d);
 
 
                               $(this).css('background-color', 'green');
@@ -72,26 +73,6 @@
 
           
 
-           function addTitle(){ //having a button onClick="addTitle()"
-            var title = $('#add_date_title').val();
-            var startdate = $('#add_date_startdate').val();
-            var enddate = $('#add_date_enddate').val();
-            var end_split = enddate.split('-');
-            end_split[2]= parseInt(end_split[2])+parseInt("1");
-            enddate = end_split[0] + "-" + end_split[1] + "-" + end_split[2];
-            $('#add_date_title').val('');
-            $('#add_date_startdate').val('');
-            $('#add_date_enddate').val('');
-            $('#add_date_modal').modal('hide');
 
-            var myCalendar = $('#calendar');
-            var myEvent = {
-                title:title,
-                allDay: true,
-                start: startdate,
-                end: enddate
-            };
-            myCalendar.fullCalendar( 'renderEvent', myEvent );
-        }       
 
       });
