@@ -63,6 +63,11 @@ class User {
 		return $insert->execute();
 	}
 	
+
+	function getdate($id) {
+       return $this->db->query("select * from dates where user_id= '$id' ");
+		
+	}
 	
 	function bio($id, $biography){
 		
