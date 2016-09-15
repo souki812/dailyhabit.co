@@ -54,6 +54,14 @@ class User {
 		$delete->bindParam(':comment_id', $comment_id, PDO::PARAM_INT);
 		$delete->execute();
 	}
+
+
+	function insert_date($date, $user_id){
+		$insert = $this->db->prepare("insert into dates(date,user_id) values(:date,:user_id)");
+        $insert->bindParam(':date', $date, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
 	
 	
 	function bio($id, $biography){

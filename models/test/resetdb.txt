@@ -48,4 +48,11 @@ create table achieved(
 	achieved_id INT AUTO_INCREMENT PRIMARY KEY 
 );
 
+create table dates{
+	date VARCHAR(255),
+	user_id INT NOT NULL,
+	date_id INT AUTO_INCREMENT PRIMARY KEY 
+
+};
+
 
