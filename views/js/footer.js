@@ -64,13 +64,22 @@
 
 
                         dayClick: function(date, jsEvent, view) {
-                              moment = $('#calendar').fullCalendar('getDate').format().stripTime();
+                              moment = $('#calendar').fullCalendar('getDate').format();
                               alert("The current date of the calendar is " + moment);
                               $(this).css('background-color', 'green');
                               
 
 
-                              
+                              $.ajax({
+                                    type: 'POST',
+                                    url: 'calendar.php',
+                                    data: { moment:moment },
+                                    success: function(response) {
+                                          moment = response;
+                                          
+                        
+                  }
+            });
                               
                         },
 
@@ -81,23 +90,9 @@
                         }
                   } 
 
-
-
-
-
-
                  }); 
 
-                        $.ajax({
-                                    type: 'POST',
-                                    url: 'calendar.php',
-                                    data: { moment:moment },
-                                    success: function(response) {
-                                          moment = response;
-                                          
-                        
-                  }
-            });
+
           
 
 
