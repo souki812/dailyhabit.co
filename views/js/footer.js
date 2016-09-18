@@ -91,18 +91,21 @@
 
 
                               var moment = $('#calendar').fullCalendar('getDate').format('DD.MM.YYYY');
-                              alert(moment);
+                              
+
+                              $("#calendar").click(function() {
                               $.ajax({
                                     type: 'POST',
                                     url: 'calendar.php',
                                     data: { moment:moment },
                                     success: function(response) {
                                           moment = response;
+                                          alert(moment);
                                           
                         
                   }
             });
-          
+           });
 
 
 
