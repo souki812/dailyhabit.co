@@ -1,5 +1,7 @@
  $(document).ready(function() {
       var val = 0;
+      var moment = 0;
+
       
             $.ajax({
                   type: 'POST',
@@ -62,18 +64,10 @@
 
 
                         dayClick: function(date, jsEvent, view) {
-                              var moment = $('#calendar').fullCalendar('getDate');
+                              moment = $('#calendar').fullCalendar('getDate').format();
                               alert("The current date of the calendar is " + moment);
-                               $.ajax({
-                                    type: 'POST',
-                                    url: 'calendar.php',
-                                    data: { moment:moment },
-                                    success: function(response) {
-                                          moment = response;
-                                          $(this).css('background-color', 'green');
-                        
-                  }
-            });
+                              $(this).css('background-color', 'green');
+                              
                               
                         },
 
@@ -83,7 +77,19 @@
                                     cell.css("background-color","red");
                         }
                   } 
+
                  }); 
+
+                  $.ajax({
+                                    type: 'POST',
+                                    url: 'calendar.php',
+                                    data: { moment:moment },
+                                    success: function(response) {
+                                          moment = response;
+                                          
+                        
+                  }
+            });
 
           
 
