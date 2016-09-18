@@ -79,9 +79,30 @@
                               if (date.isSame('2016-09-14')) {
                                     cell.css("background-color","red");
                         }
-                  } 
+                  } ,
 
-                 }); 
+
+                  events: [
+                              {
+                               title  : 'event1',
+                               start  : '2016-09-17'
+                              },
+                              {
+                              title  : 'event2',
+                              start  : '2016-09-15',
+                              end    : '2016-09-16'
+                               },
+                              {
+                              title  : 'event3',
+                              start  : '2016-09-14T12:30:00',
+                              allDay : false // will make the time show
+                              }   
+                              ]
+
+                                    }); 
+
+
+
 
                               $.ajax({
                                     type: 'POST',
