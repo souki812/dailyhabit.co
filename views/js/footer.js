@@ -1,6 +1,6 @@
  $(document).ready(function() {
       var val = 0;
-      var moment = '2016-09-17';
+      
 
       
             $.ajax({
@@ -63,20 +63,16 @@
                         height: 200,
 
 
-                        dayClick: function(date, jsEvent, view) {
+                       /* dayClick: function(date, jsEvent, view) {
                               moment = $('#calendar').fullCalendar('getDate').format();
                               alert("The current date of the calendar is " + moment);
-                              $(this).css('background-color', 'green');
-                              
-
-
-                             
+                              $(this).css('background-color', 'green');    
                               
                         },
 
 
                         dayRender: function (date, cell) {
-                              if (date.isSame('2016-09-14')) {
+                              if (date.isSame(moment)) {
                                     cell.css("background-color","red");
                         }
                   } ,
@@ -88,13 +84,14 @@
                                start  : moment
                               }
                                 
-                              ]
+                              ]  */
 
                                     }); 
 
 
 
-
+                              var moment = $('#calendar').fullCalendar('getDate').format('DD.MM.YYYY');
+                              alert(moment);
                               $.ajax({
                                     type: 'POST',
                                     url: 'calendar.php',
