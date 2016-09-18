@@ -63,7 +63,7 @@
                         height: 200,
 
 
-                       /* dayClick: function(date, jsEvent, view) {
+                        dayClick: function(date, jsEvent, view) {
                               moment = $('#calendar').fullCalendar('getDate').format();
                               alert("The current date of the calendar is " + moment);
                               $(this).css('background-color', 'green');    
@@ -89,7 +89,7 @@
                                     }); 
 
 
-
+/*
                               var moment = $('#calendar').fullCalendar('getDate').format('DD.MM.YYYY');
                               
 
@@ -105,7 +105,7 @@
                         
                   }
             });
-           });
+           }); */
 
 
 
