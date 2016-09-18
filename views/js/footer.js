@@ -70,16 +70,7 @@
                               
 
 
-                              $.ajax({
-                                    type: 'POST',
-                                    url: 'calendar.php',
-                                    data: { moment:moment },
-                                    success: function(response) {
-                                          moment = response;
-                                          
-                        
-                  }
-            });
+                             
                               
                         },
 
@@ -92,7 +83,16 @@
 
                  }); 
 
-
+                              $.ajax({
+                                    type: 'POST',
+                                    url: 'calendar.php',
+                                    data: { moment:moment },
+                                    success: function(response) {
+                                          moment = response;
+                                          
+                        
+                  }
+            });
           
 
 
