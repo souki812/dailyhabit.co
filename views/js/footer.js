@@ -65,9 +65,19 @@
 
                         dayClick: function(date, jsEvent, view) {
                               moment = $('#calendar').fullCalendar('getDate').format('MM-DD-YYYY');
-                              alert("The current date of the calendar is " + moment);
+                             // alert("The current date of the calendar is " + moment);
                               $(this).css('background-color', 'green');    
-                              
+                               $.ajax({
+                                    type: 'POST',
+                                    url: 'calendar.php',
+                                    data: { moment:moment },
+                                    success: function(response) {
+                                          moment = response;
+                                          alert(moment);
+                                          
+                        
+                  }
+            });
                         },
 
                         
@@ -82,23 +92,12 @@
                               
 
 
-/*
-                              var moment = $('#calendar').fullCalendar('getDate').format('DD.MM.YYYY');
+
                               
 
-                              $("#calendar").click(function() {
-                              $.ajax({
-                                    type: 'POST',
-                                    url: 'calendar.php',
-                                    data: { moment:moment },
-                                    success: function(response) {
-                                          moment = response;
-                                          alert(moment);
-                                          
-                        
-                  }
-            });
-           }); */
+                              
+                             
+           }); 
 
       });
 
