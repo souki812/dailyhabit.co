@@ -70,24 +70,16 @@
                               
                         },
 
-                        alert("outside dayclick: " + moment);
+                        
                         dayRender: function (date, cell) {
                               if (date.isSame(moment)) {
                                     cell.css("background-color","red");
                         }
                   } ,
-
-
-                  events: [
-                              {
-                               title  : 'event1',
-                               start  : moment
-                              }
-                                
-                              ]  
+ 
 
                                     }); 
-                              alert("outside fullcalendar: " + moment);
+                              
 
 
 /*
