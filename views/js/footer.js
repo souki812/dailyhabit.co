@@ -65,12 +65,12 @@
 
                         dayClick: function(date, jsEvent, view) {
                               moment = $('#calendar').fullCalendar('getDate').format();
-                              alert("The current date of the calendar is " + moment);
+                              //alert("The current date of the calendar is " + moment);
                               $(this).css('background-color', 'green');    
                               
                         },
 
-
+                        alert("outside dayclick: " + moment);
                         dayRender: function (date, cell) {
                               if (date.isSame(moment)) {
                                     cell.css("background-color","red");
@@ -87,6 +87,7 @@
                               ]  
 
                                     }); 
+                              alert("outside fullcalendar: " + moment);
 
 
 /*
