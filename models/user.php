@@ -65,7 +65,7 @@ class User {
 	
 
 	function getdate($id) {
-       return $this->db->query("select * from dates where user_id= '$id' ");
+       return mysql_fetch_array($this->db->query("select * from dates where user_id= '$id' "));
 		
 	}
 	

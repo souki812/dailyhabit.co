@@ -73,14 +73,27 @@
                                     data: { moment:moment },
                                     success: function(response) {
                                           moment = response;
-                                          alert(moment);      
+                                               
                                     }
                               });
                         },
 
                         
                         dayRender: function (date, cell) {
-                              if (date.isSame(moment)) {
+                               $.ajax({
+
+                                    type: 'POST',
+                                    url: 'loadcalendar.php',
+                                    data: {dateclicked:dateclicked},
+                                    dataType: 'json',
+                                    cache: false,
+                                    success: function(result) {
+                                          dateclicked = result[0];
+                              
+                                    },                       
+                              });
+
+                              if (date.isSame(dateclicked)) {
                                     cell.css("background-color","red");
                               }
                         } ,

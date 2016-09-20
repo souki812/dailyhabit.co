@@ -15,18 +15,16 @@ require_once('models/user.php');
 $user = new User($db);
       
 $id = $_SESSION['user_id'];      
-//$value = $user->getdate( $id);
 
-
-$moment = $_POST['moment'];
 
 
  if (!isset($db)) {
        exit();
  }else{
  		
-      $success = $user->insert_date($moment, $id);
-      echo $success;   
+      //Getting all the dates clicked from the database in array format
+		$dates = $user->getdate($id);
+		echo json_encode($dates); 
  }
 
 
