@@ -1,8 +1,6 @@
  $(document).ready(function() {
       var val = 0;
       
-
-      
             $.ajax({
                   type: 'POST',
                   url: 'progress.php',
@@ -96,20 +94,16 @@
                               if (date.isSame(dateclicked)) {
                                     cell.css("background-color","red");
                               }
-                        } ,
+                        },
  
 
                   }); 
-                              
+                                               
+                 });            
+           
 
 
 
-                              
 
-                              
-                             
-           }); 
-
-      //});
 
 
