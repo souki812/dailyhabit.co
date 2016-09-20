@@ -65,7 +65,7 @@
 
                         dayClick: function(date, jsEvent, view) {
                               moment = $('#calendar').fullCalendar('getDate').format('MM-DD-YYYY');
-                             //t alert("The current date of the calendar is " + moment);
+                             
                               $(this).css('background-color', 'green');    
                                $.ajax({
                                     type: 'POST',
