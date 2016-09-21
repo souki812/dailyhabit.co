@@ -88,6 +88,7 @@
                                     cache: false,
                                     success: function(result) {
                                           dateclicked = result[0];
+                                          alert(dateclicked);
                               
                                     }                      
                               }); 
