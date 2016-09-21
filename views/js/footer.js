@@ -77,7 +77,7 @@
                         },
 
                         
-                       dayRender: function (date, cell) {
+                       dayRender: function(date, cell) {
                              /*  $.ajax({
 
                                     type: 'POST',
