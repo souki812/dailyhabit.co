@@ -76,9 +76,7 @@
                               });
                         },
 
-                        
-                       
-                              $.ajax({
+                            /*  $.ajax({
 
                                     type: 'POST',
                                     url: 'loadcalendar.php',
@@ -89,14 +87,12 @@
                                           dateclicked = result[0];
                               
                                     }                      
-                              });
+                              }); */
 
-                              if (date.isSame(dateclicked)) {
-                                    cell.css("background-color","red");
-                              }
+                          //    if (date.isSame()) {
+                              //      cell.css("background-color","red");
+                         //     },
                         
- 
-
                   }); 
                                                
                  });            
