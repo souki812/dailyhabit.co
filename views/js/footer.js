@@ -78,20 +78,16 @@
                   }); 
 
 
-                              
-                              $.ajax({
 
+                              $.ajax({
                                     type: 'POST',
                                     url: 'loadcalendar.php',
-                                    data: {dateclicked:dateclicked},
-                                    dataType: 'json',
-                                    cache: false,
-                                    success: function(result) {
-                                          dateclicked = result[0];
-                                          alert(dateclicked);
-                              
-                                    }                      
-                              }); 
+                                    data: { val:val },
+                                    success: function(response) {
+                                          val = response;
+                                          alert(val);
+                             }
+            });
                                                
                  });            
            
