@@ -22,8 +22,11 @@ $id = $_SESSION['user_id'];
        exit();
  }else{
  		
+ 		echo "loadcalendar.php";
       //Getting all the dates clicked from the database in array format
 		$dates = $user->getdate($id);
+
+
 		echo json_encode($dates); 
  }
 

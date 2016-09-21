@@ -77,7 +77,7 @@
                         },
 
                         
-                       /* dayRender: function (date, cell) {
+                       dayRender: function (date, cell) {
                                $.ajax({
 
                                     type: 'POST',
@@ -88,13 +88,13 @@
                                     success: function(result) {
                                           dateclicked = result[0];
                               
-                                    },                       
+                                    }                      
                               });
 
                               if (date.isSame(dateclicked)) {
                                     cell.css("background-color","red");
                               }
-                        }, */
+                        }, 
  
 
                   }); 
