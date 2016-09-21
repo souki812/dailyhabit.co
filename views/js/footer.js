@@ -78,9 +78,9 @@
                   }); 
 
 
-
+                              alert("I'm here");
                               $.ajax({
-                                    alert("inside ajax");
+
                                     type: 'POST',
                                     url: 'loadcalendar.php',
                                     data: {dateclicked:dateclicked},
