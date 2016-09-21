@@ -94,7 +94,7 @@
                               if (date.isSame(dateclicked)) {
                                     cell.css("background-color","red");
                               }
-                        }, 
+                        } 
  
 
                   }); 
