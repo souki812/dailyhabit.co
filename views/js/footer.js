@@ -62,7 +62,7 @@
 
 
                         dayClick: function(date, jsEvent, view) {
-                              var moment = $('#calendar').fullCalendar('getDate').format('MM-DD-YYYY');
+                              var moment = date.format('MM-DD-YYYY');
                               alert(moment);
                               $(this).css('background-color', 'green');    
                                $.ajax({
