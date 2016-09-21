@@ -16,7 +16,7 @@ $user = new User($db);
       
 $id = $_SESSION['user_id'];      
 
-
+echo $id;
 
  if (!isset($db)) {
        exit();

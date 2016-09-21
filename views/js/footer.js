@@ -78,7 +78,7 @@
                   }); 
 
 
-                              alert("I'm here");
+                              
                               $.ajax({
 
                                     type: 'POST',
