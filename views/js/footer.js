@@ -82,10 +82,10 @@
                               $.ajax({
                                     type: 'POST',
                                     url: 'loadcalendar.php',
-                                    data: { val:val },
+                                    data: { dateclicked:dateclicked },
                                     success: function(response) {
-                                          val = response;
-                                          alert(val);
+                                          dateclicked = response;
+                                          alert(dateclicked);
                              }
             });
                                                

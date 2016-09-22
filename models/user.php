@@ -65,7 +65,7 @@ class User {
 	
 
 	function getdate($id) {
-       return $this->db->query("select TOP 1 from dates where user_id= '$id' ");
+       return $this->db->query("select * from dates where user_id= '$id' ");
 		
 	}
 	
