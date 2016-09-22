@@ -63,7 +63,7 @@
 
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('MM-DD-YYYY');
-                              $(moment).css('background-color', 'green');    
+                              $(this).css('background-color', 'green');    
                                $.ajax({
                                     type: 'POST',
                                     url: 'calendar.php',
@@ -74,10 +74,8 @@
                                     }
                               });
                         },
-                        
-                  }); 
 
-
+                         dayRender: function (date, cell) {
 
                               $.ajax({
                                     type: 'POST',
@@ -86,8 +84,20 @@
                                     success: function(response) {
                                           dateclicked = response;
                                           
-                             }
-            });
+                                          }
+                                    });
+
+                              if (date.isSame(dateclicked)) {
+                                    cell.css("background-color","red");
+                        }
+                  } ,
+
+                        
+                  }); 
+
+
+
+                              
                                                
                  });            
            
