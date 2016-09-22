@@ -85,7 +85,9 @@
                                           dateclicked = response;
                                           
                                           }
+                                 
                                     });*/
+                              alert(moment);
 
                               if (date.isSame(moment)) {
                                     cell.css("background-color","red");
