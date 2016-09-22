@@ -1,5 +1,6 @@
  $(document).ready(function() {
       var val = 0;
+      var dateclicked = 0;
       
             $.ajax({
                   type: 'POST',
@@ -63,6 +64,7 @@
 
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('MM-DD-YYYY');
+                              dateclicked = moment;
                               $(this).css('background-color', 'green');    
                                $.ajax({
                                     type: 'POST',
