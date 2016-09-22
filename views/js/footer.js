@@ -89,9 +89,9 @@
                                           }
                                  
                                     });*/
-                              alert(moment);
+                              alert(dateclicked);
 
-                              if (date.isSame(moment)) {
+                              if (date.isSame(dateclicked)) {
                                     cell.css("background-color","red");
                         }
                   } ,
