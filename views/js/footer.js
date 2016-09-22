@@ -77,7 +77,7 @@
 
                          dayRender: function (date, cell) {
 
-                              $.ajax({
+                            /*  $.ajax({
                                     type: 'POST',
                                     url: 'loadcalendar.php',
                                     data: { dateclicked:dateclicked },
@@ -85,9 +85,9 @@
                                           dateclicked = response;
                                           
                                           }
-                                    });
+                                    });*/
 
-                              if (date.isSame(dateclicked)) {
+                              if (date.isSame(moment)) {
                                     cell.css("background-color","red");
                         }
                   } ,
