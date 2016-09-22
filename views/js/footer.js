@@ -85,7 +85,7 @@
                                     data: { dateclicked:dateclicked },
                                     success: function(response) {
                                           dateclicked = response;
-                                          alert(dateclicked);
+                                          
                              }
             });
                                                
