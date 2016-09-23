@@ -77,7 +77,15 @@
                               });
                         },
 
-                       /*  dayRender: function (date, cell) {
+                        dayRender: function (date, cell) {
+                              var dateStr = date.format('MM-DD-YYYY');
+                              var dbDates = ['2016-09-19', '2016-09-20', '2016-09-22']
+
+                                    for (var i = 0; i < dbDates.length; i++) {
+
+                                          if (dateStr == dbDates[i].toString()) {
+                                                cell.css("background-color", "lightblue");
+                                                }
 
                             /*  $.ajax({
                                     type: 'POST',
@@ -88,13 +96,11 @@
                                           
                                           }
                                  
-                                    });
+                                    }); */
                               
 
-                              if (date.isSame(dateclicked)) {
-                                    cell.css("background-color","red");
-                        }
-                  } , */ 
+                              
+                  } , 
 
                         
                   }); 
