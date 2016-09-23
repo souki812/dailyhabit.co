@@ -86,6 +86,7 @@
                                           if (dateStr == dbDates[i].toString()) {
                                                 cell.css("background-color", "lightblue");
                                                 }
+                                          }
 
                             /*  $.ajax({
                                     type: 'POST',
@@ -98,18 +99,13 @@
                                  
                                     }); */
                               
-
-                              
-                  } , 
+                        }, 
 
                         
                   }); 
-
-
-
-                              
+             
                                                
-                 });            
+            });            
            
 
 
