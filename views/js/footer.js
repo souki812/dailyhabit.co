@@ -79,7 +79,7 @@
 
                         dayRender: function (date, cell) {
                               var dateStr = date.format('MM-DD-YYYY');
-                              var dbDates = ['2016-09-19', '2016-09-20', '2016-09-22']
+                              var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22']
 
                                     for (var i = 0; i < dbDates.length; i++) {
                                           alert(dbDates[i]);
