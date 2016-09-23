@@ -82,10 +82,10 @@
                               var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22']
 
                                     for (var i = 0; i < dbDates.length; i++) {
-                                          alert(dbDates[i]);
+                                    
 
-                                          if (dateStr == dbDates[i].toString()) {
-                                                alert(dbDates[i]);
+                                          if (dateStr.isSame(dbDates[i].toString()) {
+                                                alert(dateStr);
                                                 cell.css("background-color", "red");
                                                 }
                                           }
