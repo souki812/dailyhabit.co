@@ -72,7 +72,7 @@ class User {
 	   while($row = $select->fetch(PDO::FETCH_ASSOC)){
 	   		$dates[] = $row['date'];
 	   }
-	   return $dates[];
+	   return $dates;
 		
 	}
 	
