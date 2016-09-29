@@ -72,7 +72,7 @@ class User {
        		$result_array[] = $row['date'];
        }
 	
-	   return $result_array;
+	   return $row['date'];
 		
 	}
 	
