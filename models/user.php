@@ -68,7 +68,7 @@ class User {
 	
        $select = $this->db->query("select * from dates where user_id= '$id' ");
        $result_array = array();
-       $row = $select->fetch(PDO::FETCH_ASSOC)
+       $row = $select->fetch(PDO::FETCH_ASSOC);
        while($row = $select->fetch(PDO::FETCH_ASSOC)){
        		$result_array[] = $row['date'];
        }
