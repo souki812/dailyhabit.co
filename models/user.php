@@ -66,11 +66,11 @@ class User {
 
 	function getdate($id) {
 	
-       $select = $this->db->prepare("select * from dates where user_id= '$id' ");
+       $select = $this->db->query("select * from dates where user_id= '$id' ");
        
-       $select->execute();
+
        $row = $select->fetchAll( PDO::FETCH_ASSOC ));
-       print_r($row);
+      
 	
 	   return $row;
 		
