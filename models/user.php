@@ -71,7 +71,7 @@ class User {
 
        $row = $select->fetchAll(PDO::FETCH_ASSOC);
       
-	   print_r($row);
+	   print_r($row['date']);
 	   return $row;
 		
 	}
