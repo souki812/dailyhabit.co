@@ -17,7 +17,7 @@
 
 
 
-            $.ajax({
+        /*    $.ajax({
                   type: 'POST',
                   url: 'progress.php',
                   data: { val:val },
@@ -26,7 +26,7 @@
            
                         $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
                   }
-            });
+            });*/
 
             
                   // If the achieved button is pressed
