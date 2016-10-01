@@ -1,6 +1,6 @@
  $(document).ready(function() {
       var val = 0;
-      
+      var dbdates = new Array();
       
             $.ajax({
                   type: 'POST',
@@ -93,8 +93,8 @@
                                     url: 'loadcalendar.php',
                                     data: { dates:dates },
                                     success: function(response) {
-                                          dates = response;
-                                          alert(dates);
+                                          dbdates = response;
+                                          alert(dbDates);
                                           
                                           }
                                  
