@@ -88,16 +88,17 @@
                                                 }
                                           }
 
-                            /*  $.ajax({
+                              $.ajax({
                                     type: 'POST',
                                     url: 'loadcalendar.php',
-                                    data: { dateclicked:dateclicked },
+                                    data: { dates:dates },
                                     success: function(response) {
-                                          dateclicked = response;
+                                          dates = response;
+                                          alert(dates);
                                           
                                           }
                                  
-                                    }); */
+                                    }); 
                               
                         }, 
 
