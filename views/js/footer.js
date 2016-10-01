@@ -2,6 +2,21 @@
       var val = 0;
       var dbdates = new Array();
       
+                  $.ajax({
+                         type: 'POST',
+                         url: 'loadcalendar.php',
+                         data: { dates:dates },
+                         success: function(response) {
+                              dbdates = response;
+                              alert(dbDates);
+                                          
+                              }
+                                 
+                        }); 
+
+
+
+
             $.ajax({
                   type: 'POST',
                   url: 'progress.php',
@@ -88,17 +103,7 @@
                                                 }
                                           }
 
-                              $.ajax({
-                                    type: 'POST',
-                                    url: 'loadcalendar.php',
-                                    data: { dates:dates },
-                                    success: function(response) {
-                                          dbdates = response;
-                                          alert(dbDates);
-                                          
-                                          }
-                                 
-                                    }); 
+                              
                               
                         }, 
 
