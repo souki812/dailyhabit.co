@@ -8,7 +8,7 @@
                          data: { dbdates:dbdates },
                          success: function(response) {
                               dbdates = response;
-                              alert(dbdates);
+                              alert(dbdates[0]);
                                           
                               }
                                  
