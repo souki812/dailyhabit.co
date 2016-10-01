@@ -17,7 +17,7 @@
 
 
 
-        /*    $.ajax({
+            $.ajax({
                   type: 'POST',
                   url: 'progress.php',
                   data: { val:val },
@@ -26,7 +26,7 @@
            
                         $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
                   }
-            });*/
+            });
 
             
                   // If the achieved button is pressed
@@ -93,11 +93,11 @@
                         },
 
                         dayRender: function (date, cell) {
-                              var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
+                            //  var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
 
-                                    for (var i = 0; i < dbDates.length; i++) {
+                                    for (var i = 0; i < dbdates.length; i++) {
                                     
-                                          if (date.isSame(dbDates[i].toString())) {
+                                          if (date.isSame(dbdates[i].toString())) {
                                                 
                                                 cell.css("background-color", "red");
                                                 }
