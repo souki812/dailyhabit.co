@@ -5,7 +5,7 @@
                   $.ajax({
                          type: 'POST',
                          url: 'loadcalendar.php',
-                         data: { dates:dates },
+                         data: { dbdates:dbdates },
                          success: function(response) {
                               dbdates = response;
                               alert(dbDates);
