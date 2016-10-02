@@ -100,7 +100,7 @@
 
                                     for (var i = 0; i < db.length; i++) {
                                     
-                                          if (date.isSame(db[i]) {
+                                          if (date.isSame(db[i])) {
                                                 
                                                 cell.css("background-color", "red");
                                                 }
