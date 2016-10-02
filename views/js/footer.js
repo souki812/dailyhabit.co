@@ -1,6 +1,7 @@
  $(document).ready(function() {
       var val = 0;
       var dbdates = new Array();
+      var db= new Array();
       
                   $.ajax({
                          type: 'POST',
@@ -8,7 +9,9 @@
                          data: { dbdates:dbdates },
                          success: function(response) {
                               dbdates = response;
-                              alert(dbdates);
+                              
+                              db = new Array(dbdates.toString());
+                              alert(db);
                                           
                               }
                                  
@@ -95,9 +98,9 @@
                         dayRender: function (date, cell) {
                             //  var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
 
-                                    for (var i = 0; i < dbdates.length; i++) {
+                                    for (var i = 0; i < db.length; i++) {
                                     
-                                          if (date.isSame(dbdates[i].toString())) {
+                                          if (date.isSame(db[i]) {
                                                 
                                                 cell.css("background-color", "red");
                                                 }
