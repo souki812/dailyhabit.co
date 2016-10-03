@@ -10,13 +10,13 @@
                          success: function(response) {
                               dbdates = JSON.parse(response);
                               
-                             
+                              
                                           
                               }
                                  
                         }); 
 
-
+console.log(dbdates);
 
 
             $.ajax({
@@ -97,7 +97,7 @@
                         dayRender: function (date, cell) {
                             //  var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
                                      
-                                    console.log(dbdates);
+                                    
                                     for (var i = 0; i < dbdates.length; i++) {
                                     
                                           if (date.isSame(db[i])) {
