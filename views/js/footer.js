@@ -10,8 +10,7 @@
                          success: function(response) {
                               dbdates = JSON.parse(response);
                               
-                              db.concat(dbdates);
-                              console.log(db);
+                             
                                           
                               }
                                  
@@ -97,7 +96,8 @@
 
                         dayRender: function (date, cell) {
                             //  var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
-                                    console.log(db[0]);
+                                     
+                                    console.log(db);
                                     for (var i = 0; i < db.length; i++) {
                                     
                                           if (date.isSame(db[i])) {
