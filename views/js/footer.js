@@ -11,8 +11,8 @@
                          success: function(response) {
                               dbdates = response;
                               
-                        
-                              alert(dbdates.toString());
+                              db = dbdates.toString();
+                              alert(db);
                                           
                               }
                                  
