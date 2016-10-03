@@ -3,20 +3,8 @@
       dbdates = new Array();
       db = new Array();
       
-                  $.ajax({
-                         type: 'POST',
-                         url: 'loadcalendar.php',
-                         data: { dbdates:dbdates },
-                         success: function(response) {
-                              dbdates = JSON.parse(response);
-                              
-                              
-                                          
-                              }
-                                 
-                        }); 
+                  
 
-console.log(dbdates);
 
 
             $.ajax({
@@ -96,15 +84,28 @@ console.log(dbdates);
 
                         dayRender: function (date, cell) {
                             //  var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
-                                     
-                                    
-                                    for (var i = 0; i < dbdates.length; i++) {
+                            $.ajax({
+                         type: 'POST',
+                         url: 'loadcalendar.php',
+                         data: { dbdates:dbdates },
+                         success: function(response) {
+                              dbdates = JSON.parse(response);
+                              for (var i = 0; i < dbdates.length; i++) {
                                     
                                           if (date.isSame(db[i])) {
                                                 
                                                 cell.css("background-color", "red");
                                                 }
                                           }
+                              
+                                          
+                              }
+                                 
+                        }); 
+
+                                     
+                                    
+                                    
 
                               
                               
