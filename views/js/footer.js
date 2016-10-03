@@ -89,8 +89,8 @@
                          url: 'loadcalendar.php',
                          data: { dbdates:dbdates },
                          success: function(response) {
-                              dbdates = response;
-                              console.log(dbdates);
+                              dbdates = eval(response);
+                              
                               
                               for (var i = 0; i < dbdates.length; i++) {
                                           
