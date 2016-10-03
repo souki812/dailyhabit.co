@@ -100,18 +100,11 @@
                                                 cell.css("background-color", "red");
                                                 }
 
-                                                }
-                                          }         
+                                          }
+                                    }         
                               });
                                  
-                        }); 
-
-                                     
-                                    
-                                    
-
-                              
-                              
+                             
                         }, 
 
                         
