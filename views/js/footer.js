@@ -94,11 +94,12 @@
                               
                               for (var i = 0; i < dbdates.length; i++) {
                                           console.log(dbdates[i]);
+                                          console.log("date: " + date);
                                           if (date.isSame(dbdates[i])) {
                                                 
                                                 cell.css("background-color", "red");
-                                                }else{
-                                                      alert("Not the same")
+                                                }
+
                                                 }
                                           }
                               
