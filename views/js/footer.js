@@ -94,7 +94,7 @@
                               
                               for (var i = 0; i < dbdates.length; i++) {
                                           
-                                          if (date.isSame(dbdates[i]) {
+                                          if (date.isSame(dbdates[i])){
                                                 
                                                 cell.css("background-color", "red");
                                                 }
