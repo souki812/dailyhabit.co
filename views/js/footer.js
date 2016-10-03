@@ -10,8 +10,8 @@
                          success: function(response) {
                               dbdates = JSON.parse(response);
                               
-                              db = dbdates;
-                              
+                              db.concat(dbdates);
+                              console.log(db);
                                           
                               }
                                  
