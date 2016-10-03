@@ -82,14 +82,16 @@
                               });
                         },
 
-                        dayRender: function (date, cell) {
-                           // var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
-                            $.ajax({
+                         $.ajax({
                          type: 'POST',
                          url: 'loadcalendar.php',
                          data: { dbdates:dbdates },
                          success: function(response) {
-                              dbdates = eval(response);
+                              dbdates = response;
+
+                        dayRender: function (date, cell) {
+                           // var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
+                              console.log(dbdates);
                               
                               
                               for (var i = 0; i < dbdates.length; i++) {
