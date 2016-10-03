@@ -9,9 +9,9 @@
                          data: { dbdates:dbdates },
                          dataType: 'json',
                          success: function(response) {
-                              dbdates = response;
+                              dbdates = JSON.parse(response);
                               
-                              db = dbdates.toString();
+                              db = dbdates;
                               alert(db);
                                           
                               }
