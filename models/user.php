@@ -71,7 +71,6 @@ class User {
 
        $row = $select->fetchAll(PDO::FETCH_COLUMN);
       
-	   print_r($row);
 	   return $row;
 		
 	}
