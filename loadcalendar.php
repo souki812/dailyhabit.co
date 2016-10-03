@@ -27,7 +27,7 @@ $id = $_SESSION['user_id'];
 		$dates = $user->getdate($id);
 
 
-		echo $dates;
+		echo json_encode($dates);
  }
 
 

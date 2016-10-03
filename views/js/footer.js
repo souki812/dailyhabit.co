@@ -7,11 +7,12 @@
                          type: 'POST',
                          url: 'loadcalendar.php',
                          data: { dbdates:dbdates },
+                         dataType: 'json',
                          success: function(response) {
                               dbdates = response;
                               
-                              db = dbdates.toString();
-                              alert(db);
+                        
+                              alert(dbdates);
                                           
                               }
                                  
