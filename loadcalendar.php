@@ -26,8 +26,8 @@ $id = $_SESSION['user_id'];
       //Getting all the dates clicked from the database in array format
 		$dates = $user->getdate($id);
 
-
-		echo json_encode($dates);
+		//PHP's associative array becomes an object literal 
+		echo json_encode($dates, JSON_PRETTY_PRINT);
  }
 
 
