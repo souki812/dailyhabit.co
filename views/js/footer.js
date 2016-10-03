@@ -1,7 +1,7 @@
  $(document).ready(function() {
       var val = 0;
-      var dbdates = new Array();
-      var db = new Array();
+      dbdates = new Array();
+      db = new Array();
       
                   $.ajax({
                          type: 'POST',
