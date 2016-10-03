@@ -12,7 +12,7 @@
                               dbdates = response;
                               
                         
-                              alert(dbdates);
+                              alert(dbdates.toString());
                                           
                               }
                                  
