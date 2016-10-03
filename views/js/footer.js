@@ -83,7 +83,7 @@
                         },
 
                         dayRender: function (date, cell) {
-                            var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
+                           // var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
                             $.ajax({
                          type: 'POST',
                          url: 'loadcalendar.php',
@@ -92,11 +92,13 @@
                               dbdates = JSON.parse(response);
                              
                               
-                              for (var i = 0; i < dbDates.length; i++) {
+                              for (var i = 0; i < dbdates.length; i++) {
                                           console.log(dbdates[i]);
-                                          if (date.isSame(dbDates[i])) {
+                                          if (date.isSame(dbdates[i])) {
                                                 
                                                 cell.css("background-color", "red");
+                                                }else{
+                                                      alert("Not the same")
                                                 }
                                           }
                               
