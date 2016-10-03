@@ -90,8 +90,10 @@
                          data: { dbdates:dbdates },
                          success: function(response) {
                               dbdates = JSON.parse(response);
+                              console.log(dbdates.length);
+                              console.log(dbdates[0]);
                               for (var i = 0; i < dbdates.length; i++) {
-                                    console.log(dbdates)
+                                    
                                           if (date.isSame(db[i])) {
                                                 
                                                 cell.css("background-color", "red");
