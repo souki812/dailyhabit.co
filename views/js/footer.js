@@ -11,7 +11,7 @@
                               dbdates = response;
                               
                               db = dbdates;
-                              console.log(db[0]);
+                              console.log(db);
                                           
                               }
                                  
