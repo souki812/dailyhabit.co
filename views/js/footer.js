@@ -89,13 +89,13 @@
                          url: 'loadcalendar.php',
                          data: { dbdates:dbdates },
                          success: function(response) {
-                              dbdates = JSON.parse(response);
-                             
+                              dbdates = response;
+                              console.log(dbdates);
                               
                               for (var i = 0; i < dbdates.length; i++) {
                                           
-                                          if (date.isSame(dbdates[i].toString())) {
-                                                console.log(dbdates[i].toString());
+                                          if (date.isSame(dbdates[i]) {
+                                                
                                                 cell.css("background-color", "red");
                                                 }
 
