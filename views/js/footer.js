@@ -77,7 +77,7 @@
 
 
                         dayClick: function(date, jsEvent, view) {
-                              var moment = date.format('MM-DD-YYYY');
+                              var moment = date.format('YYYY-MM-DD');
                               
                               $(this).css('background-color', 'green');    
                                $.ajax({
@@ -92,12 +92,12 @@
                         },
 
                         dayRender: function (date, cell) {
-                           var dbDates = ['2016-09-20', '2016-09-22'];
-                              dbDates.push(dbdates[0]);
-                              console.log(dbDates);
-                              for (var i = 0; i < dbDates.length; i++) {
+                           //var dbDates = ['2016-09-20', '2016-09-22'];
+                              
+                              console.log(dbdates);
+                              for (var i = 0; i < dbdates.length; i++) {
                                           
-                                          if (date.isSame(dbDates[i])){
+                                          if (date.isSame(dbdates[i])){
                                                 
                                                 cell.css("background-color", "red");
                                                 }
