@@ -58,7 +58,7 @@ class User {
 
 	function insert_date($date, $user_id){
 		$insert = $this->db->prepare("BEGIN
-   					IF NOT EXISTS (SELECT * FROM dates 
+   					IF NOT EXISTS (SELECT date FROM dates 
                    WHERE user_id= '$user_id'
                    
    				  BEGIN
