@@ -61,7 +61,7 @@ class User {
 			BEGIN
    				IF NOT EXISTS (SELECT * FROM dates 
                    WHERE user_id= :user_id
-                   AND date = :date
+                   AND date = :date)
                    
    				  BEGIN
        				INSERT INTO dates(date,user_id) values(:date,:user_id)
