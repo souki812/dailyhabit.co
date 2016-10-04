@@ -99,7 +99,7 @@
                                           
                                           if (date.isSame(dbdates[i])){
                                                 
-                                                cell.css("background-color", "red");
+                                                cell.css("background-color", "green");
                                                 }
 
                                           }
