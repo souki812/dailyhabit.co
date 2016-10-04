@@ -93,11 +93,9 @@
 
                         dayRender: function (date, cell) {
                            // var dbDates = ['2016-09-23', '2016-09-20', '2016-09-22'];
-
-                              console.log(dbdates);
                               
                               for (var i = 0; i < dbdates.length; i++) {
-                                          
+                                          alert(dbdates[i]);
                                           if (date.isSame(dbdates[i])){
                                                 
                                                 cell.css("background-color", "red");
