@@ -57,16 +57,7 @@ class User {
 
 
 	function insert_date($date, $user_id){
-		$insert = $this->db->prepare("
-			BEGIN
-   				IF NOT EXISTS (SELECT * FROM dates 
-                   WHERE user_id= :user_id
-                   AND date = :date)
-                   
-   				  BEGIN
-       				INSERT INTO dates(date,user_id) values(:date,:user_id)
-   				END
-			END");
+		$insert = $this->db->prepare("insert into dates(date,user_id) values(:date,:user_id)");
         $insert->bindParam(':date', $date, PDO::PARAM_STR);
 		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
 		return $insert->execute();
