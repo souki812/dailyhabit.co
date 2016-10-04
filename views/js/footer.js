@@ -94,6 +94,7 @@
                         dayRender: function (date, cell) {
                            var dbDates = ['2016-09-20', '2016-09-22'];
                               dbDates.push(dbdates[0]);
+                              console.log(dbDates);
                               for (var i = 0; i < dbDates.length; i++) {
                                           
                                           if (date.isSame(dbDates[i])){
