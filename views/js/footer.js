@@ -9,7 +9,7 @@
                          url: 'loadcalendar.php',
                          data: { dbdates:dbdates },
                          success: function(response) {
-                              dbdates = response;
+                              dbdates = JSON.parse(response);
                            }
                         });
 
