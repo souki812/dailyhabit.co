@@ -11,9 +11,9 @@
                          success: function(response) {
                               dbdates = response;
                            }
-                        }
+                        });
 
-                     });
+                     
 
 
             $.ajax({
