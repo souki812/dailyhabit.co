@@ -63,7 +63,7 @@
                         $("#progress1").html('0%');       
                   });
 
-                 $('#calendar').fullCalendar({
+                var calendar = $('#calendar').fullCalendar({
                         header: {
                               left: 'prev,next today',
                               center: 'title',
