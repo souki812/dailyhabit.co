@@ -106,19 +106,55 @@
                                             
                         },
 
-                        events: [
-                              {
-                           title: 'My Event',
-                           start: '2016-10-05',
-                           description: 'This is a cool event'
-                           }
-        // more events here
-                        ],
-                        eventRender: function(event, element) {
-                           element.qtip({
-                              content: event.description
-                        });
-                     } 
+                        selectable: true,
+                        selectHelper: true,
+            /*
+               when user select timeslot this option code will execute.
+               It has three arguments. Start,end and allDay.
+               Start means starting time of event.
+               End means ending time of event.
+               allDay means if events is for entire day or not.
+            */
+                        select: function(start, end, allDay)
+                                       {
+               /*
+                  after selection user will be promted for enter title for event.
+               */
+               var title = prompt('Event Title:');
+               /*
+                  if title is enterd calendar will add title and event into fullCalendar.
+               */
+               if (title)
+               {
+                  calendar.fullCalendar('renderEvent',
+                     {
+                        title: title,
+                        start: start,
+                        end: end,
+                        allDay: allDay
+                     },
+                     true // make the event "stick"
+                  );
+               }
+               calendar.fullCalendar('unselect');
+            },
+
+
+
+            /*
+               editable: true allow user to edit events.
+            */
+            editable: true,
+            /*
+               events is the main option for calendar.
+               for demo we have added predefined events in json object.
+            */
+            events: [
+               {
+                  title: 'All Day Event',
+                  start: new Date('2016-10-05')
+               },
+              ]
 
                         
                   }); 
