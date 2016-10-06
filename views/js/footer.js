@@ -106,8 +106,8 @@
                                             
                         },
 
-                        selectable: true,
-                        selectHelper: true,
+                      //  selectable: true,
+                      //  selectHelper: true,
             /*
                when user select timeslot this option code will execute.
                It has three arguments. Start,end and allDay.
