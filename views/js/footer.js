@@ -106,8 +106,12 @@
                                             
                         },
 
-                      //  selectable: true,
-                      //  selectHelper: true,
+
+                        //Allows a user to highlight multiple days or timeslots by clicking and dragging.
+                        selectable: true,
+
+                        //A value of true will draw a "placeholder" event while the user is dragging
+                        selectHelper: true,
             /*
                when user select timeslot this option code will execute.
                It has three arguments. Start,end and allDay.
