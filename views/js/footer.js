@@ -92,9 +92,6 @@
                         },
 
                         dayRender: function (date, cell) {
-                           //var dbDates = ['2016-09-20', '2016-09-22'];
-                              
-                              console.log(dbdates);
                               for (var i = 0; i < dbdates.length; i++) {
                                           
                                           if (date.isSame(dbdates[i])){
@@ -119,8 +116,7 @@
                End means ending time of event.
                allDay means if events is for entire day or not.
             */
-                        select: function(start, end, allDay)
-                                       {
+                        select: function(start, end, allDay){
                /*
                   after selection user will be promted for enter title for event.
                */
@@ -128,10 +124,26 @@
                /*
                   if title is enterd calendar will add title and event into fullCalendar.
                */
-               if (title)
-               {
+               if (title){
+
+
+
+
+                   var date = start;
+                              
+                                
+                               $.ajax({
+                                    type: 'POST',
+                                    url: 'AddEvent.php',
+                                    data: { date:date, title:title },
+                                    success: function(response) {
+                                          date = response;
+                                               
+                                    }
+                              });
                   calendar.fullCalendar('renderEvent',
                      {
+
                         title: title,
                         start: start,
                         end: end,

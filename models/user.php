@@ -74,6 +74,27 @@ class User {
 	   return $row;
 		
 	}
+
+
+	function insert_event($title, $date, $user_id){
+		$insert = $this->db->prepare("insert into events(title,date,user_id) values(:title,:date,:user_id)");
+        $insert->bindParam(':title', $title, PDO::PARAM_STR);
+        $insert->bindParam(':date', $date, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+	
+
+	function getevent($id) {
+	
+       $select = $this->db->query("select * from events where user_id= '$id' ");
+       
+
+       $row = $select->fetchAll(PDO::FETCH_COLUMN);
+      
+	   return $row;
+		
+	}
 	
 	function bio($id, $biography){
 		
