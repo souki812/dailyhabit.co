@@ -103,7 +103,7 @@
                                             
                         },
 
-
+/*
                         //Allows a user to highlight multiple days or timeslots by clicking and dragging.
                         selectable: true,
 
@@ -116,18 +116,15 @@
                End means ending time of event.
                allDay means if events is for entire day or not.
             */
-                        select: function(start, end, allDay){
+           /*             select: function(start, end, allDay){
                /*
                   after selection user will be promted for enter title for event.
-               */
+               
                var title = prompt('Event Title:');
                /*
                   if title is enterd calendar will add title and event into fullCalendar.
-               */
+               
                if (title){
-
-
-
 
                    var date = start;
                               
@@ -159,18 +156,18 @@
 
             /*
                editable: true allow user to edit events.
-            */
+            
             editable: true,
             /*
                events is the main option for calendar.
                for demo we have added predefined events in json object.
-            */
+            
             events: [
                {
                   title: 'All Day Event',
                   start: new Date('2016-10-05')
                },
-              ]
+              ] */
 
                         
                   }); 
