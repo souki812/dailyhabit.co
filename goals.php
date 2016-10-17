@@ -28,7 +28,7 @@ $id = $_SESSION['user_id'];
     
                 // Add a goal 
                 if ($_POST['task'] == 'current') {
-                    $success = $user->current(  $_POST['current'], $id);
+                    $success = $user->current(  $_POST['current_habit'], $_POST['current_days'], $id);
                 }
         
                 if ($_POST['task'] == 'future') {

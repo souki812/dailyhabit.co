@@ -113,10 +113,11 @@ class User {
 
 	
 		
-	function current($current, $id){
+	function current($current, $days, $id){
 		
-		$insert = $this->db->prepare("insert into current(current,user_id) values(:current,:user_id)");
+		$insert = $this->db->prepare("insert into current(current,days,user_id) values(:current,:days,:user_id)");
         $insert->bindParam(':current', $current, PDO::PARAM_STR);
+        $insert->bindParam(':days', $days, PDO::PARAM_INT);
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}

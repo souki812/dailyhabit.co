@@ -47,7 +47,9 @@
                         <form action="goals.php" method="post" class="well">
                         <form class="form">
                             <label >Current</label>
-                            <textarea class="form-control" rows="5" id="comment1"  name="current" autocomplete="off" autofocus></textarea>
+                            <textarea class="form-control" rows="5" id="comment1"  name="current_habit" autocomplete="off" autofocus></textarea>
+                            <label >Enter the number of days you want to perform the habit:</label>
+                            <textarea class="form-control" rows="1" id="days"  name="current_days" autocomplete="off" autofocus></textarea>
                             <input type="hidden" name="task" value="current">
                             <button type="submit" class="btn btn-default button">Add</button>
                         </form>
