@@ -34,6 +34,8 @@
                 <form action="goals.php" method="post">
                     <?php foreach ($current as $row): ?>
                     <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['days'], ENT_QUOTES, 'utf-8'); ?></h4>
+
                     <input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br>          
                     <?php endforeach; ?>
