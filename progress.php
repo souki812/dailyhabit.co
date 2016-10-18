@@ -16,9 +16,9 @@ $user = new User($db);
       
 $id = $_SESSION['user_id'];      
 $value = $user->getprogress( $id);
+$days = $user->getcurrentdays($id);
 
-
-$val = $_POST['val'] + $value;
+$val = $_POST['val'] + $days;
 
 
  if (!isset($db)) {
