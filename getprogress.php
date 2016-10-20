@@ -21,7 +21,7 @@ $days = $user->getcurrentdays($id);
  if (!isset($db)) {
        exit();
  }else{
-      $val = $val + 100/$days;
+      $val = $val + ceil(100/$days);
       $success = $user->progress( $val, $id);
       echo $success;
  }
