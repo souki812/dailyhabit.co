@@ -16,12 +16,12 @@ $user = new User($db);
       
 $id = $_SESSION['user_id'];      
 $val = $_POST['val'] ;
-
+$days = $user->getcurrentdays($id);
 
  if (!isset($db)) {
        exit();
  }else{
-      $val = $val + 5;
+      $val = $val + 100/$days;
       $success = $user->progress( $val, $id);
       echo $success;
  }
