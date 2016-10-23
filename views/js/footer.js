@@ -29,7 +29,7 @@
 
             
                   // If the achieved button is pressed
-                  $("#target").click(function() {
+          /**        $("#target").click(function() {
       
                         $.ajax({
                               type: 'POST',
@@ -52,7 +52,7 @@
                                     $("#progress1").html(response + '%');
                               }
                         });  
-                  });
+                  }); **/
                   
                   
                   
@@ -79,7 +79,36 @@
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('YYYY-MM-DD');
                               
-                              $(this).css('background-color', 'green');    
+                              $(this).css('background-color', 'green');
+                               $.ajax({
+                              type: 'POST',
+                              url: 'getprogress.php',
+                              data: { val:val },
+                              success: function(response) {
+            
+                                    val = response;
+                        
+                                    if (val == 100) {
+                                          window.alert("Congratulations on reaching 100%!");
+                                    }
+        
+                                    // If the progress bar reaches 100% reset it back to 0
+                                    if (val > 100) {
+                                          val = 0;
+                                    }
+         
+                                    $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+                                    $("#progress1").html(response + '%');
+                              }
+                        });  
+
+
+
+
+
+
+
+
                                $.ajax({
                                     type: 'POST',
                                     url: 'calendar.php',
