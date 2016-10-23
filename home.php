@@ -40,7 +40,7 @@ if (isset($_POST['comment_id'])) {
     
 $selection =  $user->selectAll( $id);
 $comments =  $user->selectNewsfeed($id);
-
+$currenthabit = $user->getcurrenthabit($id);
 
 // Show whatever this activity is
 

@@ -89,7 +89,7 @@
                                     val = response;
                         
                                     if (val == 100) {
-                                          window.alert("Congratulations on reaching 100%!");
+                                          window.alert("Congratulations on completing your habit!");
                                     }
         
                                     // If the progress bar reaches 100% reset it back to 0

@@ -129,6 +129,14 @@ class User {
 		$row = $select->fetch(PDO::FETCH_ASSOC);
 		return $row['days'];
 	 }
+
+	 function getcurrenthabit($id) {
+        $select = $this->db->prepare('select current from current where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+		$row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['current'];
+	 }
 	
 		 // Attempt to return the ID of this user
     function selectCurrent($id) {
