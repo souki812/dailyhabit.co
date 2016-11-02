@@ -15,7 +15,7 @@ require_once('models/user.php');
 $user = new User($db);
       
 $id = $_SESSION['user_id'];      
-//$value = $user->getdate( $id);
+$habit_id = $user->getcurrenthabit($id);
 
 
 $moment = $_POST['moment'];
@@ -25,7 +25,7 @@ $moment = $_POST['moment'];
        exit();
  }else{
  		
-      $success = $user->insert_date($moment, $id);
+      $success = $user->insert_date($moment, $id, $habit_id);
       echo $success;   
  }
 

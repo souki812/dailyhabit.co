@@ -56,17 +56,18 @@ class User {
 	}
 
 
-	function insert_date($date, $user_id){
-		$insert = $this->db->prepare("insert into dates(date,user_id) values(:date,:user_id)");
+	function insert_date($date, $user_id, $habit_id){
+		$insert = $this->db->prepare("insert into dates(date,user_id,habit_id) values(:date,:user_id,:habit_id)");
         $insert->bindParam(':date', $date, PDO::PARAM_STR);
+        $insert->bindParam(':habit_id', $habit_id, PDO::PARAM_INT);
 		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
 	
 
-	function getdate($id) {
+	function getdate($id, $habit_id) {
 	
-       $select = $this->db->query("select * from dates where user_id= '$id' ");
+       $select = $this->db->query("select * from dates where user_id= '$id' and habit_id='habit_id");
        
 
        $row = $select->fetchAll(PDO::FETCH_COLUMN);
@@ -136,6 +137,14 @@ class User {
         $select->execute();
 		$row = $select->fetch(PDO::FETCH_ASSOC);
 		return $row['current'];
+	 }
+
+	 function gethabitid($id) {
+        $select = $this->db->prepare('select * from current where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+		$row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['current_id'];
 	 }
 	
 		 // Attempt to return the ID of this user

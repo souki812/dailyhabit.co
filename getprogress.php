@@ -17,6 +17,11 @@ $user = new User($db);
 $id = $_SESSION['user_id'];      
 $val = $_POST['val'] ;
 $days = $user->getcurrentdays($id);
+$habit_id = $user->getcurrenthabit($id);
+
+
+
+
 
  if (!isset($db)) {
        exit();

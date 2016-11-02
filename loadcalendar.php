@@ -15,7 +15,7 @@ require_once('models/user.php');
 $user = new User($db);
       
 $id = $_SESSION['user_id'];      
-
+$habit_id = $user->getcurrenthabit($id);
 
 
  if (!isset($db)) {
@@ -24,7 +24,7 @@ $id = $_SESSION['user_id'];
  		
  		
       //Getting all the dates clicked from the database in array format
-		$dates = $user->getdate($id);
+		$dates = $user->getdate($id, $habit_id);
 
 		//PHP's associative array becomes an object literal 
 		echo json_encode($dates, JSON_PRETTY_PRINT);

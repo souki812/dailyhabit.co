@@ -37,7 +37,7 @@
         <div class="col-md-8 col-md-offset-2  home" >
             <center>
             <div>
-                <h3 class="words">Your Daily Summary</h3>
+                <h3 class="words">Current Habit:</h3>
                 <h5 class="words"><?php echo htmlentities($currenthabit, ENT_QUOTES, 'utf-8'); ?></h5>
             </div>
 

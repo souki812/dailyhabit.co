@@ -17,6 +17,7 @@ $user = new User($db);
 $id = $_SESSION['user_id'];      
 $value = $user->getprogress( $id);
 $days = $user->getcurrentdays($id);
+$habit_id = $user->getcurrenthabit($id);
 
 $val = $_POST['val'];
 
