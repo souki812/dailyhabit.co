@@ -15,7 +15,7 @@ require_once('models/user.php');
 $user = new User($db);
       
 $id = $_SESSION['user_id'];      
-$habit_id = $user->getcurrenthabit($id);
+$habit_id = $user->gethabitid($id);
 
 
  if (!isset($db)) {
