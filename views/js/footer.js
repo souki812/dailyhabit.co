@@ -11,7 +11,36 @@
                          success: function(response) {
                               dbdates = JSON.parse(response);
                            }
-                        }); 
+                        });
+
+                     
+
+
+            $.ajax({
+                  type: 'POST',
+                  url: 'getprogress.php',
+                  data: { val:val },
+                  success: function(response) {
+                        val = response;
+                        alert(val);
+                        $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+
+                         if (val == 100) {
+                                 window.alert("Congratulations on completing your habit!");
+                                    }
+        
+                        // If the progress bar reaches 100% reset it back to 0
+                        if (val > 100) {
+                              val = 0;
+                           }
+                  }
+            });
+
+            
+         
+                  
+                  
+                  
                   
                   // If the reset button is pressed
                   $("#reset").click(function() {
@@ -36,35 +65,10 @@
                               var moment = date.format('YYYY-MM-DD');
                               
                               $(this).css('background-color', 'green');
-                               $.ajax({
-                              type: 'POST',
-                              url: 'getprogress.php',
-                              data: { val:val },
-                              success: function(response) {
-                                    alert(val);
-                                    console.log(val);
-                                    val = response;
-                        
-                                    if (val == 100) {
-                                          window.alert("Congratulations on completing your habit!");
-                                    }
-        
-                                    // If the progress bar reaches 100% reset it back to 0
-                                    if (val > 100) {
-                                          val = 0;
-                                    }
-         
-                                    $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
-                                    $("#progress1").html(response + '%');
+                               
+               
                               }
-                        });  
-
-
-
-
-
-
-
+                     
 
                                $.ajax({
                                     type: 'POST',
