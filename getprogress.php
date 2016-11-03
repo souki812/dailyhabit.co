@@ -16,12 +16,12 @@ $user = new User($db);
       
 $id = $_SESSION['user_id'];      
 $val = $_POST['val'] ;
-//$days = $user->getcurrentdays($id);
+$days = $user->getcurrentdays($id);
 
 
 
 $habit_id = $user->gethabitid($id);
-$days = $user->countdate($id, $habit_id);
+$count = $user->countdate($id, $habit_id);
 
 
 
@@ -29,8 +29,8 @@ $days = $user->countdate($id, $habit_id);
  if (!isset($db)) {
        exit();
  }else{
-      //$val = ceil(100/$days);
-      $val = $days;
+      $val = ceil(($count/$days)*100);
+     
       echo $val;
  }
 
