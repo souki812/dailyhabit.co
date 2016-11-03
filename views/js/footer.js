@@ -96,6 +96,32 @@
                            }
                   }
             });
+
+
+                                 $.ajax({
+                         type: 'POST',
+                         async: false,
+                         url: 'loadcalendar.php',
+                         data: { dbdates:dbdates },
+                         success: function(response) {
+                              dbdates = JSON.parse(response);
+                           }
+                        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         },
 
                         dayRender: function (date, cell) {
