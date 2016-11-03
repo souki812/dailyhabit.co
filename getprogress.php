@@ -30,7 +30,7 @@ $days = $user->countdate($id, $habit_id);
        exit();
  }else{
       $val = ceil(100/$days);
-      echo $val;
+      echo $days;
  }
 
 $progress = $user->selectAll( $id);

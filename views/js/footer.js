@@ -41,6 +41,7 @@
                               url: 'getprogress.php',
                               data: { val:val },
                               success: function(response) {
+                                    alert(val);
                                     console.log(val);
                                     val = response;
                         
