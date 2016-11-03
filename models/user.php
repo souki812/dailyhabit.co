@@ -82,7 +82,7 @@ class User {
 	
        $select = $this->db->query("select count(*) from dates where user_id= '$id' and habit_id='$habit_id'");
       
-       $row = $select->fetchAll(PDO::FETCH_COLUMN);
+       $row = $select->fetchColumn();
       
 	   return $row;
 		
