@@ -29,7 +29,8 @@ $days = $user->countdate($id, $habit_id);
  if (!isset($db)) {
        exit();
  }else{
-      $val = ceil(100/$days);
+      //$val = ceil(100/$days);
+      $val = $days;
       echo $val;
  }
 
