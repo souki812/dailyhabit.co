@@ -24,7 +24,7 @@ $habit_id = $user->gethabitid($id);
  		
  		
       //Getting all the dates clicked from the database in array format
-		$dates = $user->getdate($id, $habit_id);
+		$dates = $user->getdate($id);
 
 		//PHP's associative array becomes an object literal 
 		echo json_encode($dates, JSON_PRETTY_PRINT);

@@ -16,9 +16,12 @@ $user = new User($db);
       
 $id = $_SESSION['user_id'];      
 $val = $_POST['val'] ;
-$days = $user->getcurrentdays($id);
+//$days = $user->getcurrentdays($id);
 
 
+
+$habit_id = $user->gethabitid($id);
+$days = $user->countdate($id, $habit_id);
 
 
 
@@ -26,9 +29,8 @@ $days = $user->getcurrentdays($id);
  if (!isset($db)) {
        exit();
  }else{
-      $val = $val + ceil(100/$days);
-      $success = $user->progress( $val, $id);
-      echo $success;
+      $val = ceil(100/$days);
+      echo $val;
  }
 
 $progress = $user->selectAll( $id);

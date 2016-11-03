@@ -64,12 +64,24 @@ class User {
 		return $insert->execute();
 	}
 	
-
-	function getdate($id, $habit_id) {
+	//GETDATE FOR CALENDAR
+	function getdate($id) {
 	
-       $select = $this->db->query("select * from dates where user_id= '$id' and habit_id='$habit_id'");
+       $select = $this->db->query("select * from dates where user_id= '$id'");
        
 
+       $row = $select->fetchAll(PDO::FETCH_COLUMN);
+      
+	   return $row;
+		
+	}
+
+
+	//for progress
+	function countdate($id, $habit_id) {
+	
+       $select = $this->db->query("select count(*) from dates where user_id= '$id' and habit_id='$habit_id'");
+      
        $row = $select->fetchAll(PDO::FETCH_COLUMN);
       
 	   return $row;
