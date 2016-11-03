@@ -66,10 +66,6 @@
                               
                               $(this).css('background-color', 'green');
                                
-               
-                              }
-                     
-
                                $.ajax({
                                     type: 'POST',
                                     url: 'calendar.php',
