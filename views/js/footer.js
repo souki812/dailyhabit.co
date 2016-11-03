@@ -41,7 +41,7 @@
                               url: 'getprogress.php',
                               data: { val:val },
                               success: function(response) {
-            
+                                    console.log(val);
                                     val = response;
                         
                                     if (val == 100) {
