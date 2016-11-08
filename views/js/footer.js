@@ -51,10 +51,6 @@
                               var moment = date.format('YYYY-MM-DD');
                         
 
-                              var now = new Date();
-                             if (date.setHours(0,0,0,0) < now.setHours(0,0,0,0)){
-                                
-
                               $(this).css('background-color', 'green');
 
                               
@@ -88,7 +84,7 @@
                         if (val > 100) {
                               val = 0;
                            }
-                  }
+                  
             });
 
 
@@ -106,6 +102,10 @@
                         },
 
                         dayRender: function (date, cell) {
+                              maxDate = new Date();
+                              if (date > maxDate){
+                                  $(cell).addClass('disabled');
+                                  }
                               for (var i = 0; i < dbdates.length; i++) {
                                           
                                           if (date.isSame(dbdates[i])){
@@ -116,9 +116,7 @@
                                           }
                                             
                         },
-
-
-                        
+    
                   }); 
              
                                                
