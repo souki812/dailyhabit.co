@@ -49,12 +49,12 @@
 
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('YYYY-MM-DD');
-                              var check = $('#calendar').fullCalendar.formatDate(start,'yyyy-MM-dd');
+                             
 
-                              var today = $('#calendar').fullCalendar.formatDate(new Date(),'yyyy-MM-dd');
-                              alert("check: " + check  + " today: " + today);
+                              var today = $('#calendar').fullCalendar('getDate').format('YYYY-MM-DD');
+                              alert("moment: " + moment  + " today: " + today);
 
-                              if (check < today){
+                              if (moment <= today){
 
 
                               $(this).css('background-color', 'green');
