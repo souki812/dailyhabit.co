@@ -51,7 +51,7 @@
                               var moment = date.format('YYYY-MM-DD');
                              
 
-                              var currentDate = new Date();
+                              var currentDate = new Date().format('YYYY-MM-DD');
                               alert("moment: " + moment  + " today: " + currentDate);
 
                               if (moment <= currentDate){
