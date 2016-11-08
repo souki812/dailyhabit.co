@@ -26,27 +26,14 @@
 
                          if (val == 100) {
                                  window.alert("Congratulations on completing your habit!");
+                                 val = 0;
                                     }
-        
-                        // If the progress bar reaches 100% reset it back to 0
-                        if (val > 100) {
-                              val = 0;
-                           }
                   }
             });
 
             
-         
-                  
-                  
-                  
-                  
-                  // If the reset button is pressed
-                  $("#reset").click(function() {
-                        $('.progress-bar').css('width', '0%').attr('aria-valuenow', 0);
-                        $("#progress1").html('0%');       
-                  });
 
+                //FullCalendar
                 var calendar = $('#calendar').fullCalendar({
                         header: {
                               left: 'prev,next today',
@@ -62,7 +49,14 @@
 
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('YYYY-MM-DD');
-                              
+                              var check = $('#calendar').fullCalendar.formatDate(start,'yyyy-MM-dd');
+
+                              var today = $('#calendar').fullCalendar.formatDate(new Date(),'yyyy-MM-dd');
+                              alert("check: " + check  + " today: " + today);
+
+                              if (check < today){
+
+
                               $(this).css('background-color', 'green');
 
                               
@@ -110,20 +104,7 @@
                            }
                         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
                         },
 
                         dayRender: function (date, cell) {
