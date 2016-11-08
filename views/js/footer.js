@@ -52,10 +52,10 @@
                              
 
                               var currentDate = new Date();
-                              
+                              alert("moment: " + moment  + " today: " + currentDate);
 
                               if (moment <= currentDate){
-                                alert("moment: " + moment  + " today: " + currentDate);
+                                
 
                               $(this).css('background-color', 'green');
 
