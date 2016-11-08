@@ -84,6 +84,7 @@
                         if (val > 100) {
                               val = 0;
                            }
+                         }
                   
             });
 
@@ -98,7 +99,7 @@
                            }
                         });
 
-}
+
                         },
 
                         dayRender: function (date, cell) {
