@@ -49,7 +49,7 @@
 
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('YYYY-MM-DD');
-                             
+
                               
                               $(this).css('background-color', 'green');
 
@@ -112,9 +112,12 @@
                                           }
                                             
                         },
-
-
-                        
+                        viewRender: function(view){
+                              maxDate = new Date();
+                              if (view.start > maxDate){
+                                  $('#calendar').fullCalendar('gotoDate', maxDate);
+                                  }
+                                },
                   }); 
              
                                                
