@@ -52,7 +52,7 @@
                              
 
                               var currentDate = $('#calendar').fullCalendar('getDate');
-                              alert("date: " + date.format() + " today: " + currentDate;
+                              alert("date: " + date.format() + " today: " + currentDate);
 
                               if (date.format() <= currentDate{
                                 
