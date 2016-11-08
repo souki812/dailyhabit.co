@@ -52,9 +52,9 @@
                              
 
                               var currentDate = new Date();
-                              alert("date: " + date + " today: " + currentDate);
+                              alert("date: " + date.format() + " today: " + currentDate);
 
-                              if (date <= currentDate){
+                              if (date.format() <= currentDate){
                                 
 
                               $(this).css('background-color', 'green');
