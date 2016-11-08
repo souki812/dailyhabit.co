@@ -49,12 +49,10 @@
 
                         dayClick: function(date, jsEvent, view) {
                               var moment = date.format('YYYY-MM-DD');
-                             
+                        
 
-                              var currentDate = $('#calendar').fullCalendar('getDate');
-                              alert("date: " + date.format() + " today: " + currentDate);
-
-                              if (date.format() <= currentDate{
+                              var now = new Date();
+                             if (date.setHours(0,0,0,0) < now.setHours(0,0,0,0)){
                                 
 
                               $(this).css('background-color', 'green');
