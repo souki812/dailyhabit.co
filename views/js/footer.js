@@ -51,10 +51,10 @@
                               var moment = date.format('YYYY-MM-DD');
                              
 
-                              var currentDate = new Date();
-                              alert("date: " + date.format() + " today: " + currentDate.format());
+                              var currentDate = $('#calendar').fullCalendar('getDate');
+                              alert("date: " + date.format() + " today: " + currentDate;
 
-                              if (date.format() <= currentDate.format()){
+                              if (date.format() <= currentDate{
                                 
 
                               $(this).css('background-color', 'green');
