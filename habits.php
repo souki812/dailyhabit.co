@@ -24,8 +24,9 @@ $id = $_SESSION['user_id'];
       $user = new User($db);
         
         
-       
+       }
 // Show whatever this activity is
 
 require('views/habits.php');
 require('views/footer.php');
+
