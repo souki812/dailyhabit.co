@@ -23,10 +23,24 @@ $id = $_SESSION['user_id'];
       require_once('models/user.php');
       $user = new User($db);
         
+        if (isset($_POST['task'])) {
+    
+                // Add a goal 
+                if ($_POST['task'] == 'current') {
+                    $success = $user->current(  $_POST['current_habit'], $_POST['current_days'], $id);
+                }
         
+       
+        }
+    
+        // Remove a goal
+        if (isset($_POST['current_id'])) {
+            $success= $user->remove_current( $_POST['current_id']);
+        }
+
        }
 // Show whatever this activity is
-
+$current =  $user->selectCurrent( $id);
 require('views/goals.php');
 require('views/footer.php');
 
