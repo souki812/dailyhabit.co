@@ -40,7 +40,7 @@ $id = $_SESSION['user_id'];
 
        }
 // Show whatever this activity is
-$current =  $user->selectGoal( $id);
+$current =  $user->selectGoals( $id);
 require('views/goals.php');
 require('views/footer.php');
 
