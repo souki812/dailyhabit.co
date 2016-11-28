@@ -33,10 +33,12 @@
             <div class="type2">
                 <form action="goals.php" method="post">
                     <?php foreach ($current as $row): ?>
-                    <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['days'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['goal'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['variable'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['unit'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
 
-                    <input type="hidden" name="goal_id" value="<?php echo $row['current_id']; ?>">
+                    <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br>          
                     <?php endforeach; ?>
                 </form>
@@ -49,11 +51,11 @@
                         <form action="goals.php" method="post" class="well">
                         <form class="form">
                             <label>New Goal</label>
-                            <textarea class="form-control" rows="5" id="comment1"  name="current_habit" autocomplete="off" autofocus ></textarea>
+                            <textarea class="form-control" rows="5" id="comment1"  name="goal" autocomplete="off" autofocus ></textarea>
                             <label>How do you want to track your progress?</label>
-                            <textarea class="form-control" rows="1" id="days"  name="current_days" autocomplete="off" placeholder="Variable (e.g: savings)" autofocus></textarea>
-                            <textarea class="form-control" rows="1" id="days"  name="current_days" autocomplete="off" placeholder="Units (e.g: $)" autofocus></textarea>
-                            <textarea class="form-control" rows="1" id="days"  name="current_days" autocomplete="off" placeholder="Goal value: (e.g: 100000" autofocus></textarea>
+                            <textarea class="form-control" rows="1" id="days"  name="variable" autocomplete="off" placeholder="Variable (e.g: savings)" autofocus></textarea>
+                            <textarea class="form-control" rows="1" id="days"  name="unit" autocomplete="off" placeholder="Units (e.g: $)" autofocus></textarea>
+                            <textarea class="form-control" rows="1" id="days"  name="value" autocomplete="off" placeholder="Goal value: (e.g: 100000" autofocus></textarea>
 
 
 

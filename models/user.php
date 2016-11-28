@@ -124,6 +124,22 @@ class User {
 		return $progress;
 	}
 
+		function insert_goal($goal, $variable, $unit, $value,  $id){
+		
+		$insert = $this->db->prepare("insert into goals(goal,variable,unit,value,user_id) values(:goal,:variable,:unit,:value,:user_id)");
+        $insert->bindParam(':goal', $goal, PDO::PARAM_STR);
+        $insert->bindParam(':variable', $variable, PDO::PARAM_STR);
+        $insert->bindParam(':unit', $unit, PDO::PARAM_STR);
+        $insert->bindParam(':value', $value, PDO::PARAM_INT);
+		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+
+	 function selectGoals($id) {
+       return $this->db->query("select * from goals where user_id= '$id' ");
+		
+	}
+
 	
 		
 	function current($current, $days, $id){
@@ -134,6 +150,7 @@ class User {
 		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
+
 
 	function getcurrentdays($id) {
         $select = $this->db->prepare('select days from current where user_id=:user_id');
