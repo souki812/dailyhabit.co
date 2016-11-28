@@ -26,7 +26,7 @@ $id = $_SESSION['user_id'];
         if (isset($_POST['task'])) {
     
                 // Add a goal 
-                if ($_POST['task'] == 'current') {
+                if ($_POST['task'] == 'goal') {
                     $success = $user->insert_goal( $_POST['goal'], $_POST['variable'], $_POST['unit'], $_POST['value'],  $id);
                 }
         
