@@ -140,6 +140,12 @@ class User {
 		
 	}
 
+	function remove_goal($goal_id){
+		$delete = $this->db->prepare('delete from goals where goal_id= :goal_id');
+		$delete->bindParam(':goal_id', $goal_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
+
 	
 		
 	function current($current, $days, $id){

@@ -34,8 +34,8 @@ $id = $_SESSION['user_id'];
         }
     
         // Remove a goal
-        if (isset($_POST['current_id'])) {
-            $success= $user->remove_current( $_POST['current_id']);
+        if (isset($_POST['goal_id'])) {
+            $success= $user->remove_goal( $_POST['goal_id']);
         }
 
        }
