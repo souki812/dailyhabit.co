@@ -1,3 +1,5 @@
+ <?php require_once("./conf.php");  ?>  
+
    <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +15,7 @@
               
             </div>
 
-     
+  
 <?php require('menu.php'); ?>
 
 
@@ -69,8 +71,9 @@
             </div>
             </div>
         
-       
-                
+       <?php
+           $pc = new C_PhpChartX(array(array(11, 9, 5, 12, 14)),'basic_chart');
+            $pc->draw();     ?>
                 
         </div>
     </div> 
