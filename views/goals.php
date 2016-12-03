@@ -1,6 +1,5 @@
- <?php require_once("./conf.php");  ?>  
-
-   <!DOCTYPE html>
+ 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -15,7 +14,7 @@
               
             </div>
 
-  
+ <?php require_once('./conf.php');  ?>   
 <?php require('menu.php'); ?>
 
 
