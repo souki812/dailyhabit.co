@@ -1,5 +1,5 @@
 <?php
-define('SCRIPTPATH', '/dailyhabit.co/phpChart');
+define('SCRIPTPATH', '/phpChart/');
 define('DEBUG', false);
 
 
