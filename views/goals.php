@@ -18,7 +18,7 @@
 
     
 <?php require('menu.php'); ?>
-<?php require_once('./conf.php');  ?>
+
 
     
     
