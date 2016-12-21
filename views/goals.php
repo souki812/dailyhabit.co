@@ -72,6 +72,13 @@
         
        <?php
            $pc = new C_PhpChartX(array(array(11, 9, 5, 12, 14)),'basic_chart');
+           $pc->set_title(array('text'=>'Basic Chart'));
+           $pc->set_animate(true);
+           $pc->add_plugins(array('highlighter', 'cursor'));
+           $pc->set_defaults(array(
+    'seriesDefaults'=>array('renderer'=>'plugin::BarRenderer','rendererOptions'=> array('barPadding'=>6,'barMargin'=>40)),
+    'axesDefaults'=>array('showTickMarks'=>true,'tickOptions'=>array('formatString'=>'%d')),
+    'stackSeries'=>true));
             $pc->draw();     ?>
                 
         </div>
