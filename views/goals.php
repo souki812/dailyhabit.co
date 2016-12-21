@@ -7,6 +7,8 @@
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="views/css/goals.css">
+          <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="jquery.sparkline.js"></script>
     </head>
     <body>
         <div class="container">
@@ -70,16 +72,42 @@
             </div>
             </div>
         
-       <?php
-           $pc = new C_PhpChartX(array(array(11, 9, 5, 12, 14)),'basic_chart');
-           $pc->set_title(array('text'=>'Basic Chart'));
-           $pc->set_animate(true);
-           $pc->add_plugins(array('highlighter', 'cursor'));
-           $pc->set_defaults(array(
-    'seriesDefaults'=>array('renderer'=>'plugin::BarRenderer','rendererOptions'=> array('barPadding'=>6,'barMargin'=>40)),
-    'axesDefaults'=>array('showTickMarks'=>true,'tickOptions'=>array('formatString'=>'%d')),
-    'stackSeries'=>true));
-            $pc->draw();     ?>
+    
+
+    <script type="text/javascript">
+    $(function() {
+        /** This code runs when everything has been loaded on the page */
+        /* Inline sparklines take their values from the contents of the tag */
+        $('.inlinesparkline').sparkline(); 
+
+        /* Sparklines can also take their values from the first argument 
+        passed to the sparkline() function */
+        var myvalues = [10,8,5,7,4,4,1];
+        $('.dynamicsparkline').sparkline(myvalues);
+
+        /* The second argument gives options such as chart type */
+        $('.dynamicbar').sparkline(myvalues, {type: 'bar', barColor: 'green'} );
+
+        /* Use 'html' instead of an array of values to pass options 
+        to a sparkline with data in the tag */
+        $('.inlinebar').sparkline('html', {type: 'bar', barColor: 'red'} );
+    });
+    </script>
+</head>
+<body>
+
+<p>
+Inline Sparkline: <span class="inlinesparkline">1,4,4,7,5,9,10</span>.
+</p>
+<p>
+Sparkline with dynamic data: <span class="dynamicsparkline">Loading..</span>
+</p>
+<p>
+Bar chart with dynamic data: <span class="dynamicbar">Loading..</span>
+</p>
+<p>
+Bar chart with inline data: <span class="inlinebar">1,3,4,5,3,5</span>
+</p>
                 
         </div>
     </div> 
