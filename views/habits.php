@@ -24,8 +24,8 @@
             
             
         <!--Current Goal-->
-          <div class="col-md-4">
-            <div class="form-group">
+          <div class="col-md-4 comment">
+            <div class="form-group type1">
                 <label><h3 class="form-group words"><span class="glyphicon glyphicon-road goals"></span> Current Goal:</h3></label>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button><br>
             </div>
