@@ -9,26 +9,7 @@
         margin-top:150px;    
     }
     
-    .firstbutton {
-        margin-left: 40px;
-        margin-bottom: 10px;
-    }
-    
-    .secondbutton {
-        /* margin-left: 20px; */
-        float: right;
-        display: inline-block;
-        margin-top: 30px;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white
-    }
-    
-    .secondbutton hover {
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
+  
     
     .page {
          padding-top: 100px; 
@@ -43,16 +24,7 @@
         color: white;
     }
     
-    .button {
-        border: #DC143C;
-        background-color: #DC143C;
-    }
     
-    .button hover {
-        border: #555555;
-        background-color: #555555;
-        color: white;
-    }
     
     .goals {
         margin-top: 10px;
@@ -62,12 +34,4 @@
         font-family: Rockwell, serif;
     }
     
-    .type1 {
-        border-top: 20px solid #000;
-        border-bottom: 20px solid #000;
-    }
-    
-    .type2 {
-        background-color: #eeeeee;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    }
+  
