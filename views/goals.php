@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       
        <link rel="stylesheet" href="views/css/goals.css">
     </head>
     <body>
@@ -30,6 +31,8 @@
                 <label><h3 class="form-group words"><span class="glyphicon glyphicon-road goals"></span>Goals</h3></label>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button><br>
             </div>
+
+            <canvas id="myChart" width="400" height="400"></canvas>
             
             <div class="type2">
                 <form action="goals.php" method="post">

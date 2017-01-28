@@ -5,7 +5,7 @@
         <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
         <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
 
-    
+    	<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js'></script>
      
     </body>
 </html>
