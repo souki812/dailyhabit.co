@@ -7,6 +7,7 @@ if(isset($_SESSION['user_id'])){
 
   require('views/home.php');
   require('views/footer.php');
+  require('views/goals.js')
    
 } else{
     require('views/signup.php');
