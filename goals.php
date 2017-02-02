@@ -41,7 +41,7 @@ $id = $_SESSION['user_id'];
        }
 // Show whatever this activity is
 $current =  $user->selectGoals( $id);
-echo json_encode($current, JSON_PRETTY_PRINT);
+echo json_encode($current['goal'], JSON_PRETTY_PRINT);
 require('views/goals.php');
 require('views/footer.php');
 
