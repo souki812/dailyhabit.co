@@ -1,4 +1,23 @@
  $(document).ready(function() {
+
+
+
+
+                    $.ajax({
+                         type: 'POST',
+                         async: false,
+                         url: 'goals.php',
+                         data: { current:current },
+                         success: function(response) {
+                              current = JSON.parse(response);
+                              console.log(current);
+                           }
+                        });
+
+
+
+
+
                     var ctx = document.getElementById("myChart");
                     var myChart = new Chart(ctx, {
                         type: 'bar',
