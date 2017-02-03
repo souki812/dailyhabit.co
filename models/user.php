@@ -140,6 +140,14 @@ class User {
 		
 	}
 
+	function getgoal($id) {
+        $select = $this->db->prepare('select goal from goals where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+		$row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['goal'];
+	 }
+
 	function remove_goal($goal_id){
 		$delete = $this->db->prepare('delete from goals where goal_id= :goal_id');
 		$delete->bindParam(':goal_id', $goal_id, PDO::PARAM_INT);
