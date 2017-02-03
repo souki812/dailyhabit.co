@@ -10,6 +10,7 @@
                                     data: { goal:goal},
                                     success: function(response) {
                                           goal = response;
+                                          alert(goal);
                                                
                                     }
                               });
