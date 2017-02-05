@@ -29,7 +29,7 @@ $id = $_SESSION['user_id'];
                 if ($_POST['task'] == 'goal') {
                     $success = $user->insert_goal( $_POST['goal'], $_POST['variable'], $_POST['unit'], $_POST['value'],  $id);
                     $goal = $user->getgoal($id);
-                    echo $success;
+                    
                 }
         
        
