@@ -22,6 +22,8 @@ $id = $_SESSION['user_id'];
      
       require_once('models/user.php');
       $user = new User($db);
+
+   
         
         if (isset($_POST['task'])) {
     
@@ -43,8 +45,7 @@ $id = $_SESSION['user_id'];
 // Show whatever this activity is
 $current =  $user->selectGoals( $id);
 
-$goal = $user->getgoal($id);
-echo $goal;
-//require('views/goals.php');
-//require('views/footer.php');
+
+require('views/goals.php');
+require('views/footer.php');
 

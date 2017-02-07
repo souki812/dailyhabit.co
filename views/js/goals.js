@@ -6,7 +6,7 @@
                       $.ajax({
                                     type: 'POST',
                                     async: false,
-                                    url: 'goals.php',
+                                    url: 'graph.php',
                                     data: { goal:goal},
                                     success: function(response) {
                                           goal = response;
