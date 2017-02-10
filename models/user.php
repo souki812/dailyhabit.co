@@ -139,6 +139,17 @@ class User {
        return $this->db->query("select * from goals where user_id= '$id' ");
 		
 	}
+	//GETDATE FOR CALENDAR
+	function getGoals($id) {
+	
+       $select = $this->db->query("select * from goals where user_id= '$id'");
+       
+
+       $row = $select->fetchAll(PDO::FETCH_COLUMN);
+      
+	   return $row;
+		
+	}
 
 	function getgoal($id) {
         $select = $this->db->prepare('select goal from goals where user_id=:user_id');
