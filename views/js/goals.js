@@ -7,9 +7,9 @@
                                     type: 'POST',
                                     async: false,
                                     url: 'graph.php',
-                                    data: { goals:goals},
+                                    data: { goal:goal},
                                     success: function(response) {
-                                          goals = response;
+                                          goal = response;
                                           
                                                
                                     }
@@ -25,7 +25,7 @@
                         data: {
                             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                             datasets: [{
-                                label: goals,
+                                label: goal,
                                 data: [12, 19, 3, 5, 2, 3],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
