@@ -9,8 +9,8 @@
                                     url: 'graph.php',
                                     data: { goals:goals},
                                     success: function(response) {
-                                          goals = JSON.parse(response);
-                                          alert(goals[1]);
+                                          goals = response;
+                                          
                                                
                                     }
                               });
@@ -25,7 +25,7 @@
                         data: {
                             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                             datasets: [{
-                                label: goals[0],
+                                label: goals,
                                 data: [12, 19, 3, 5, 2, 3],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',

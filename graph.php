@@ -23,8 +23,8 @@ $id = $_SESSION['user_id'];
       require_once('models/user.php');
       $user = new User($db);
 
-      $goal = $user->getGoals($id);
-      echo json_encode($goals, JSON_PRETTY_PRINT);
+      $goal = $user->getgoal($id);
+      echo $goal;
       
         
         
