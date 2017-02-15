@@ -1,6 +1,8 @@
  $(document).ready(function() {
     var goal = 0;
     var variable = 0;
+    var value = 0;
+    var unit = 0;
 
 
 
@@ -31,6 +33,34 @@
                               });
 
 
+                       $.ajax({
+                                    type: 'POST',
+                                    async: false,
+                                    url: 'value.php',
+                                    data: { value:value},
+                                    success: function(response) {
+                                          value = response;
+                                          
+                                          
+                                               
+                                    }
+                              });
+
+
+                       $.ajax({
+                                    type: 'POST',
+                                    async: false,
+                                    url: 'unit.php',
+                                    data: { unit:unit},
+                                    success: function(response) {
+                                          unit = response;
+                                          
+                                          
+                                               
+                                    }
+                              });
+
+
 
 
 
@@ -40,7 +70,7 @@
                         data: {
                             labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                             datasets: [{
-                                label: [goal, variable],
+                                label: [goal, variable, value, unit],
                                 data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',

@@ -159,6 +159,24 @@ class User {
 
 	 }
 
+	  function getunit($id){
+	 	 $select = $this->db->prepare('select unit from goals where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+		$row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['unit'];
+
+	 }
+
+	 function getvalue($id){
+	 	 $select = $this->db->prepare('select value from goals where user_id=:user_id');
+        $select->bindParam(':user_id', $id, PDO::PARAM_INT);
+        $select->execute();
+		$row = $select->fetch(PDO::FETCH_ASSOC);
+		return $row['value'];
+
+	 }
+
 	function remove_goal($goal_id){
 		$delete = $this->db->prepare('delete from goals where goal_id= :goal_id');
 		$delete->bindParam(':goal_id', $goal_id, PDO::PARAM_INT);
