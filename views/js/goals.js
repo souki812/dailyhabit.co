@@ -107,7 +107,7 @@
                         options: {
                             title: {
                                 display: true,
-                                text: goal
+                                text: "goal"
                                 }
                             scales: {
                                 yAxes: [{
