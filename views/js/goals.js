@@ -109,6 +109,14 @@
                                 display: true,
                                 text: goal
                                 },
+
+                            legend: {
+                                display: true,
+                                labels: {
+                                     xLabel: unit,
+                                     yLabel: variable,
+                                    fontColor: 'rgb(255, 99, 132)'
+                            },
                             scales: {
                                 yAxes: [{
                                     ticks: {
