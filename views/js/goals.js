@@ -108,7 +108,7 @@
                             title: {
                                 display: true,
                                 text: "goal"
-                                }
+                                },
                             scales: {
                                 yAxes: [{
                                     ticks: {
