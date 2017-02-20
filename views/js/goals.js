@@ -110,15 +110,25 @@
                                 text: goal
                                 },
 
+
+                            scales: {
+                                yAxes: {
+                                    
+                                    }
+                                },
+
                             legend: {
                                 display: true,
                                 labels: {
-                                     xLabel: unit,
-                                     yLabel: variable,
+
                                     fontColor: 'rgb(255, 99, 132)'
                             },
                             scales: {
                                 yAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: variable
+                                        },
                                     ticks: {
                                         beginAtZero:true
                                     }
