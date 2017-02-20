@@ -109,20 +109,6 @@
                                 display: true,
                                 text: goal
                                 },
-
-
-                            scales: {
-                                yAxes: {
-                                    
-                                    }
-                                },
-
-                            legend: {
-                                display: true,
-                                labels: {
-
-                                    fontColor: 'rgb(255, 99, 132)'
-                            },
                             scales: {
                                 yAxes: [{
                                     scaleLabel: {
