@@ -118,6 +118,15 @@
                                     ticks: {
                                         beginAtZero:true
                                     }
+                                }],
+                                xAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: unit
+                                        },
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
                                 }]
                             }
                         }
