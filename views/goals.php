@@ -73,6 +73,12 @@
                 </div>
                 </div>   
             </div>
+
+
+
+            <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
+            <input type="submit" name="update" class="update" value="Update Progress"><br> 
+            
             </div>
         
     

@@ -70,7 +70,6 @@
                         data: {
                             labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                             datasets: [{
-                                label: [],
                                 data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
