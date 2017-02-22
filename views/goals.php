@@ -76,9 +76,32 @@
 
 
 
-            <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
-            <input type="submit" name="update" class="update" value="Update Progress"><br> 
-            
+             <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button><br>
+
+
+
+            <div class="modal" id="modal4">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form action="goals.php" method="post" class="well">
+                        <form class="form">
+                            <label>Update Progress</label>
+                            <textarea class="form-control" rows="5" id="comment1"  name="goal" autocomplete="off" autofocus ></textarea>
+                            
+                            <textarea class="form-control" rows="1" id="days"  name="variable" autocomplete="off" placeholder="Variable (e.g: savings)" autofocus></textarea>
+                            <textarea class="form-control" rows="1" id="days"  name="unit" autocomplete="off" placeholder="Date" autofocus></textarea>
+                          
+
+
+                            <input type="hidden" name="task" value="goal">
+                            <button type="submit" class="btn btn-default button">Add</button>
+                        </form>
+                        </form>
+                    </div>
+                </div>
+                </div>   
+
             </div>
         
     
