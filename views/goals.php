@@ -86,14 +86,12 @@
                     <div class="modal-body">
                         <form action="goals.php" method="post" class="well">
                         <form class="form">
-                            <label>Update Progress</label>
-                            <textarea class="form-control" rows="5" id="comment1"  name="goal" autocomplete="off" autofocus ></textarea>
-                            
-                            <textarea class="form-control" rows="1" id="days"  name="variable" autocomplete="off" placeholder="Variable (e.g: savings)" autofocus></textarea>
+                            <label>Update Progress</label> 
+                            <textarea class="form-control" rows="1" id="days"  name="variable" autocomplete="off" placeholder="Variable" autofocus></textarea>
                             <textarea class="form-control" rows="1" id="days"  name="unit" autocomplete="off" placeholder="Date" autofocus></textarea>
-                          
 
 
+                             <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
                             <input type="hidden" name="task" value="goal">
                             <button type="submit" class="btn btn-default button">Add</button>
                         </form>

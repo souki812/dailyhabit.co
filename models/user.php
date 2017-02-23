@@ -135,6 +135,16 @@ class User {
 		return $insert->execute();
 	}
 
+		function insert_update($value, $date, $user_id, $goal_id){
+		
+		$insert = $this->db->prepare("insert into update(value,date,user_id,goal_id) values(:value,:date,:user_id,:goal_id)");
+        $insert->bindParam(':value', $value, PDO::PARAM_INT);
+        $insert->bindParam(':date', $date, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		$insert->bindParam(':goal_id', $goal_id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
+
 	 function selectGoals($id) {
        return $this->db->query("select * from goals where user_id= '$id' ");
 		
