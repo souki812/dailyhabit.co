@@ -88,7 +88,7 @@
                         <form class="form">
                             <label>Update Progress</label> 
                             <textarea class="form-control" rows="1" id="days"  name="variable" autocomplete="off" placeholder="Variable" autofocus></textarea>
-                            <textarea class="form-control" rows="1" id="days"  name="unit" autocomplete="off" placeholder="Date" autofocus></textarea>
+                            <textarea class="form-control" rows="1" id="days"  name="date" autocomplete="off" placeholder="Date" autofocus></textarea>
 
 
                              <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">

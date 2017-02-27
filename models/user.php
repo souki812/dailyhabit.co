@@ -145,6 +145,11 @@ class User {
 		return $insert->execute();
 	}
 
+	function selectUpdate($id) {
+       return $this->db->query("select * from update where user_id= '$id' ");
+		
+	}
+
 	 function selectGoals($id) {
        return $this->db->query("select * from goals where user_id= '$id' ");
 		
