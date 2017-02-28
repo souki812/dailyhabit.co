@@ -91,8 +91,8 @@
                             <textarea class="form-control" rows="1" id="days"  name="date" autocomplete="off" placeholder="Date" autofocus></textarea>
 
 
-                             <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
-                            <input type="hidden" name="task" value="goal">
+                             
+                            <input type="hidden" name="task" value="update">
                             <button type="submit" class="btn btn-default button">Add</button>
                         </form>
                         </form>
