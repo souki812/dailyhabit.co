@@ -84,7 +84,7 @@
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <form action="goals.php" method="post" class="well">
+                        <form action="update.php" method="post" class="well">
                         <form class="form">
                             <label>Update Progress</label> 
                             <textarea class="form-control" rows="1" id="days"  name="variable" autocomplete="off" placeholder="Variable" autofocus></textarea>
@@ -100,6 +100,21 @@
                 </div>
                 </div>   
 
+            </div>
+
+
+            <div class="type2">
+                <form action="update.php" method="post">
+                    <?php foreach ($update as $row): ?>
+                
+                    <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></h4>
+                  
+
+                    <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"><br>          
+                    <?php endforeach; ?>
+                </form>
             </div>
         
     
