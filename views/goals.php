@@ -77,7 +77,19 @@
 
 
              <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button><br>
+             
+             <div class="type2">
+                <form action="goals.php" method="post">
+                    <?php foreach ($update as $row): ?>
+                
+                    <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h4> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></h4>
+                  
 
+                            
+                    <?php endforeach; ?>
+                </form>
+            </div>
 
 
             <div class="modal" id="modal4">
@@ -103,18 +115,7 @@
             </div>
 
 
-            <div class="type2">
-                <form action="goals.php" method="post">
-                    <?php foreach ($update as $row): ?>
-                
-                    <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></h4>
-                  
-
-                            
-                    <?php endforeach; ?>
-                </form>
-            </div>
+            
         
     
 
