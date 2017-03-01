@@ -32,6 +32,12 @@ $id = $_SESSION['user_id'];
                     $success = $user->insert_goal( $_POST['goal'], $_POST['variable'], $_POST['unit'], $_POST['value'],  $id);
                     
                 }
+
+                // Add an update 
+                if ($_POST['task'] == 'update') {
+                    $success = $user->insert_update( $_POST['update'], $_POST['date'], $id);
+                    
+                }
         
        
         }
@@ -44,6 +50,7 @@ $id = $_SESSION['user_id'];
        }
 // Show whatever this activity is
 $current =  $user->selectGoals( $id);
+$update =  $user->selectUpdate( $id);
 
 
 require('views/goals.php');
