@@ -36,7 +36,7 @@ $id = $_SESSION['user_id'];
                 // Add an update 
                 if ($_POST['task'] == 'update') {
                     $success = $user->insert_update( $_POST['update'], $_POST['date'], $id);
-                    
+                    echo "true";
                 }
         
        
