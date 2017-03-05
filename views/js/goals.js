@@ -68,7 +68,6 @@
                     var myChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                             datasets: [{
                                 data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
                                 backgroundColor: [
@@ -118,15 +117,25 @@
                                         beginAtZero:true
                                     }
                                 }],
-                                xAxes: [{
-                                    scaleLabel: {
+                                scales: {
+                                    xAxes: [{
+                                        scaleLabel: {
                                         display: true,
                                         labelString: unit
                                         },
-                                    ticks: {
-                                        beginAtZero:true
+                                        type: 'time',
+                                        time: {
+                                        displayFormats: {
+                                            'millisecond': 'MMM DD',
+                                            'second': 'MMM DD',
+                                            'minute': 'MMM DD',
+                                            'hour': 'MMM DD',
+            
+                                        }
                                     }
-                                }]
+                                }],
+                                
+
                             }
                         }
                     });
