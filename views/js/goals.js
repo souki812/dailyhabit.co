@@ -68,6 +68,7 @@
                     var myChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
+                            
                             datasets: [{
                                 data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
                                 backgroundColor: [
@@ -118,26 +119,31 @@
                                     }
                                 }],
                                 xAxes: [{
-                                        scaleLabel: {
-                                        display: true,
-                                        labelString: unit
-                                        },
-                                        type: 'time',
-                                        time: {
-                                        displayFormats: {
-                                            'millisecond': 'MMM DD',
-                                            'second': 'MMM DD',
-                                            'minute': 'MMM DD',
-                                            'hour': 'MMM DD',
-            
-                                        }
-                                    }
-                                }]
-                                
 
+                                   type: 'time',
+                                   scaleLabel: {
+                                       display: true,
+                                        labelString: unit
+                                    },
+                                   time: {
+                                     displayFormats: {
+                                       'millisecond': 'MMM DD',
+                                       'second': 'MMM DD',
+                                       'minute': 'MMM DD',
+                                       'hour': 'MMM DD',
+                                       'day': 'MMM DD',
+                                       'week': 'MMM DD',
+                                       'month': 'MMM DD',
+                                       'quarter': 'MMM DD',
+                                       'year': 'MMM DD',
+                                     }
+                                   }
+                                 }],
+                                   
+                              
                             }
-                        
-                    
-            }
-        });
+                        }
+                    });
+            });
+
 
