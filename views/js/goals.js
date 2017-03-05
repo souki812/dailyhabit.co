@@ -117,8 +117,7 @@
                                         beginAtZero:true
                                     }
                                 }],
-                                scales: {
-                                    xAxes: [{
+                                xAxes: [{
                                         scaleLabel: {
                                         display: true,
                                         labelString: unit
@@ -137,7 +136,7 @@
                                 
 
                             }
-                        }
+                        
                     
             }
         });
