@@ -61,7 +61,9 @@
                               });
 
 
-
+                     function newDate(days) {
+                           return moment().add(days, 'd');
+                              };   
 
 
                     var ctx = document.getElementById("myChart");
