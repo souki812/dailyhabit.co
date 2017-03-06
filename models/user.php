@@ -137,7 +137,7 @@ class User {
 
 		function insert_update($value, $date, $user_id){
 		
-		$insert = $this->db->prepare("insert into update(value,date,user_id) values(:value,:date,:user_id)");
+		$insert = $this->db->prepare("insert into goalupdate(value,date,user_id) values(:value,:date,:user_id)");
         $insert->bindParam(':value', $value, PDO::PARAM_INT);
         $insert->bindParam(':date', $date, PDO::PARAM_STR);
 		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
@@ -145,7 +145,7 @@ class User {
 	}
 
 	function selectUpdate($id) {
-       return $this->db->query("select * from update where user_id= '$id' ");
+       return $this->db->query("select * from goalupdate where user_id= '$id' ");
 		
 	}
 
