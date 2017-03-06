@@ -1,3 +1,9 @@
+
+
+//Only display dates for data points
+//http://stackoverflow.com/questions/41284788/chart-js-only-show-labels-on-x-axis-for-data-points
+
+
  $(document).ready(function() {
     var goal = 0;
     var variable = 0;

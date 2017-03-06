@@ -23,10 +23,10 @@ $id = $_SESSION['user_id'];
       require_once('models/user.php');
       $user = new User($db);
 
-   
+        echo "inside else";
         
         if (isset($_POST['task'])) {
-    
+                    echo "task is set to true";
                 // Add a goal 
                 if ($_POST['task'] == 'goal') {
                     $success = $user->insert_goal( $_POST['goal'], $_POST['variable'], $_POST['unit'], $_POST['value'],  $id);
