@@ -77,6 +77,9 @@ class User {
 	}
 
 
+	
+
+
 	//for progress
 	function countdate($id, $habit_id) {
 	
@@ -146,6 +149,29 @@ class User {
 
 	function selectUpdate($id) {
        return $this->db->query("select * from goalupdate where user_id= '$id' ");
+		
+	}
+
+	//GETDATE FOR CALENDAR
+	function getupdatedate($id) {
+	
+       $select = $this->db->query("select date from goalupdate where user_id= '$id'");
+       
+
+       $row = $select->fetchAll(PDO::FETCH_COLUMN);
+      
+	   return $row;
+		
+	}
+
+	function getupdatevalue($id) {
+	
+       $select = $this->db->query("select value from goalupdate where user_id= '$id'");
+       
+
+       $row = $select->fetchAll(PDO::FETCH_COLUMN);
+      
+	   return $row;
 		
 	}
 

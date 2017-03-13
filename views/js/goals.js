@@ -9,6 +9,19 @@
     var variable = 0;
     var value = 0;
     var unit = 0;
+    var updatedates = new Array();
+   
+      
+                  $.ajax({
+                         type: 'POST',
+                         async: false,
+                         url: 'updatedate.php',
+                         data: { updatedates:updatedates },
+                         success: function(response) {
+                              updatedates = JSON.parse(response);
+                              alert(updatedates);
+                           }
+                        });
 
 
 
