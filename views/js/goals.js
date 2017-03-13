@@ -19,7 +19,7 @@
                          data: { updatedates:updatedates },
                          success: function(response) {
                               updatedates = JSON.parse(response);
-                              alert(updatedates);
+                              console.log(updatedates);
                            }
                         });
 
