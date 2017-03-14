@@ -24,7 +24,7 @@ $id = $_SESSION['user_id'];
  		
  		
       //Getting all the dates clicked from the database in array format
-		$updatevalues = $user->getupdatevalue($id)
+		$updatevalues = $user->getupdatevalue($id);
 
 		//PHP's associative array becomes an object literal 
 		echo json_encode($updatevalues, JSON_PRETTY_PRINT);
