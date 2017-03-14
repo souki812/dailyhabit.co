@@ -19,7 +19,7 @@
                          data: { updatevalues:updatevalues },
                          success: function(response) {
                               updatevalues = JSON.parse(response);
-                              console.log(updatedates);
+                              console.log(updatevalues);
                            }
                         });
 
