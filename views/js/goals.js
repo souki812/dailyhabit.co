@@ -10,8 +10,24 @@
     var value = 0;
     var unit = 0;
     var updatedates = new Array();
+    var updatevalues = new Array();
    
-      
+            $.ajax({
+                         type: 'POST',
+                         async: false,
+                         url: 'updatevalue.php',
+                         data: { updatevalues:updatevalues },
+                         success: function(response) {
+                              updatevalues = JSON.parse(response);
+                              console.log(updatedates);
+                           }
+                        });
+
+
+
+
+
+
                   $.ajax({
                          type: 'POST',
                          async: false,
