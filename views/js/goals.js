@@ -106,10 +106,10 @@
                         type: 'bar',
                         data: {
                             
-                            labels: [newDate(-4), newDate(-3), newDate(2), newDate(3), newDate(4), newDate(5), newDate(6)],
+                            labels: updatedates,
                             datasets: [{
                               label: goal,
-                              data: [1, 3, 4, 2, 1, 4, 2],
+                              data: updatevalues,
                             }]
                         },
                         options: {
