@@ -98,12 +98,20 @@
 
                      function newDate(days) {
                            return moment().add(days, 'd');
-                              };   
+                              };  
+
+                      function randomColorFactor() {
+                            return Math.round(Math.random() * 255);
+                            };
+                      function randomColor(opacity) {
+                            return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+                            };
 
 
                     var ctx = document.getElementById("myChart");
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
+                    var myChart = new Chart(ctx, config);
+                   var config = {
+                        type: 'line',
                         data: {
                             
                             labels: updatedates,
@@ -130,6 +138,16 @@
                                 xAxes: [{
 
                                    type: 'time',
+                                   ticks: {
+                                       autoSkip : false,
+                                        callback: function(value, index, values) {
+                                                  return new moment(value).format('DD MMM');
+                                                  }
+                                                },
+
+                                        gridLines : {
+                                            display : false,
+                                            },
                                    scaleLabel: {
                                        display: true,
                                         labelString: unit
@@ -153,6 +171,14 @@
                             }
                         }
                     });
+
+            jQuery.each(config.data.datasets, function(i, dataset) {
+                    dataset.borderColor = randomColor(0.4);
+                    dataset.backgroundColor = randomColor(0.5);
+                    dataset.pointBorderColor = randomColor(0.7);
+                    dataset.pointBackgroundColor = randomColor(0.5);
+                    dataset.pointBorderWidth = 1;
+        });
             });
 
 
