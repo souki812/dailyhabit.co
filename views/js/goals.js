@@ -170,7 +170,7 @@
                               
                             }
                         }
-                    });
+                    };
 
             jQuery.each(config.data.datasets, function(i, dataset) {
                     dataset.borderColor = randomColor(0.4);
