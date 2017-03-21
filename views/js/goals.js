@@ -103,14 +103,19 @@
 
                     var ctx = document.getElementById("myChart");
                     var myChart = new Chart(ctx, {
-                        type: 'line',
+                        type: 'bar',
                         data: {
                             
                             labels: updatedates,
                             datasets: [{
                               label: goal,
                               data: updatevalues,
-                            }]
+                            }],
+
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255,99,132,1)',
+                            borderWidth: 1
+        
                         },
                         options: {
                             title: {
@@ -131,14 +136,14 @@
 
                                    type: 'time',
                                    ticks: {
-                                       autoSkip : false,
+                                        autoSkip: false,
                                         callback: function(value, index, values) {
                                                   return new moment(value).format('DD MMM');
                                                   }
                                                 },
 
                                         gridLines : {
-                                            display : false,
+                                            display: false,
                                             },
                                    scaleLabel: {
                                        display: true,
