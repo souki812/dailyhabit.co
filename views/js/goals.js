@@ -135,7 +135,7 @@
                                 xAxes: [{
 
                                    type: 'time',
-                                   barPercentage: 0.5,
+                                   barPercentage: 0.1,
                                    ticks: {
                                         autoSkip: false,
                                         callback: function(value, index, values) {
