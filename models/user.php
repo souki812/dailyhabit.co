@@ -175,6 +175,13 @@ class User {
 		
 	}
 
+	function remove_update($update_id){
+		$delete = $this->db->prepare('delete from goalupdate where update_id= :update_id');
+		$delete->bindParam(':update_id', $update_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
+
+
 	 function selectGoals($id) {
        return $this->db->query("select * from goals where user_id= '$id' ");
 		

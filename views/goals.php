@@ -85,7 +85,8 @@
                     <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
                     <h4> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></h4>
                   
-
+                    <input type="hidden" name="update_id" value="<?php echo $row['update_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"><br> 
                             
                     <?php endforeach; ?>
                 </form>

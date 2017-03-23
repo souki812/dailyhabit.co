@@ -26,7 +26,7 @@ $id = $_SESSION['user_id'];
         echo "inside else";
         
         if (isset($_POST['task'])) {
-                    echo "task is set to true";
+                   
                 // Add a goal 
                 if ($_POST['task'] == 'goal') {
                     $success = $user->insert_goal( $_POST['goal'], $_POST['variable'], $_POST['unit'], $_POST['value'],  $id);
@@ -35,9 +35,9 @@ $id = $_SESSION['user_id'];
 
                 // Add an update 
                 if ($_POST['task'] == 'update') {
-                    echo "inside update";
+                  
                     $success = $user->insert_update( $_POST['update'], $_POST['date'], $id);
-                  echo "completed pdate";  
+                  
                 }
         
        
