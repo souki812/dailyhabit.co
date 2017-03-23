@@ -48,6 +48,11 @@ $id = $_SESSION['user_id'];
             $success= $user->remove_goal( $_POST['goal_id']);
         }
 
+         // Remove an update
+        if (isset($_POST['update_id'])) {
+            $success= $user->remove_update( $_POST['update_id']);
+        }
+
        }
 // Show whatever this activity is
 $current =  $user->selectGoals( $id);

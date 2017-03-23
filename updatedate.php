@@ -21,10 +21,7 @@ $id = $_SESSION['user_id'];
  if (!isset($db)) {
        exit();
  }else{
- 		 // Remove a goal
-        if (isset($_POST['update_id'])) {
-            $success= $user->remove_update( $_POST['update_id']);
-        }
+ 		
 
  		
       //Getting all the dates clicked from the database in array format
