@@ -19,7 +19,7 @@
                          data: { updatevalues:updatevalues },
                          success: function(response) {
                               updatevalues = JSON.parse(response);
-                              console.log(updatevalues);
+                              
                            }
                         });
 
@@ -35,7 +35,7 @@
                          data: { updatedates:updatedates },
                          success: function(response) {
                               updatedates = JSON.parse(response);
-                              console.log(updatedates);
+                              
                            }
                         });
 
@@ -135,21 +135,14 @@
 
                                    type: 'time',
                                    barPercentage: 0.1,
-                                   ticks: {
-                                        autoSkip: false,
-                                        callback: function(value, index, values) {
-                                                  return new moment(value).format('DD MMM');
-                                                  }
-                                                },
-
-                                        gridLines : {
-                                            display: false,
+                                    gridLines:{
+                                            display: true,
                                             },
                                    scaleLabel: {
                                        display: true,
-                                        labelString: unit
+                                       labelString: unit
                                     },
-                                   time: {
+                                   time:{
                                      displayFormats: {
                                        'millisecond': 'MMM DD',
                                        'second': 'MMM DD',
