@@ -130,8 +130,9 @@
 
              <div class="col-md-4 comment">
             <div class="form-group type1">
+            </div>
 
- 
+  <div class="type2">
 
  <div style="width:75%;">
     <canvas id="canvas"></canvas>
