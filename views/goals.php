@@ -130,13 +130,14 @@
 
              <div class="col-md-4 comment">
             <div class="form-group type1">
+                 <label><h3 class="form-group words"><span class="glyphicon glyphicon-road goals"></span>Goals</h3></label>
             </div>
 
   <div class="type2">
 
- <div style="width:75%;">
+ 
     <canvas id="canvas"></canvas>
-</div>
+
 <br>
 <br>
 <button id="randomizeData">Randomize Data</button>
