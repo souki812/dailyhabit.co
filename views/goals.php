@@ -130,7 +130,7 @@
   <div class="type2">
 
  
-    <canvas id="canvas width="400" height="400""></canvas>
+    <canvas id="canvas" width="400" height="400"></canvas>
 
 <br>
 <br>
