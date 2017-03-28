@@ -178,6 +178,7 @@
                     data: [{
                         x: newDate(0),
                         y: randomScalingFactor()
+                        console.log(newDate(0));
                     }, {
                         x: newDate(2),
                         y: randomScalingFactor()
@@ -188,6 +189,7 @@
                         x: newDate(5),
                         y: randomScalingFactor()
                     }],
+
                     fill: false
                 }]
             },
