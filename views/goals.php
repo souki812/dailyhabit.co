@@ -154,6 +154,7 @@
         function newDateString(days) {
             return moment().add(days, 'd').format();
         }
+        console.log(newDate(0));
         var config = {
             type: 'line',
             data: {
@@ -178,7 +179,7 @@
                     data: [{
                         x: newDate(0),
                         y: randomScalingFactor()
-                        console.log(newDate(0));
+
                     }, {
                         x: newDate(2),
                         y: randomScalingFactor()
