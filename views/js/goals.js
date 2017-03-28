@@ -95,11 +95,12 @@
                                     }
                               });
 
+ 
+                    console.log(updatevalues);
+                    console.log(updatedates);
 
-                     function newDate(days) {
-                           return moment().add(days, 'd');
-                              };   
-
+                    console.log(updatedates[0]);
+                    console.log(updatevalues[0]);
 
                     var ctx = document.getElementById("myChart");
                     var myChart = new Chart(ctx, {
