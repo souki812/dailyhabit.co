@@ -106,10 +106,22 @@
                         type: 'bar',
                         data: {
                             
-                            labels: updatedates,
+                        
                             datasets: [{
                               label: goal,
-                              data: updatevalues,
+                              data: [{
+                                      x: updatedates[0],
+                                      y: updatevalues[0]
+                                  }, {
+                                      x: updatedates[1],
+                                      y: updatevalues[1]
+                                  }, {
+                                      x: updatedates[2],
+                                      y: updatevalues[2]
+                                  }, {
+                                      x: updatedates[3],
+                                      y: updatevalues[3]
+                                  }],
                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
                               borderColor: 'rgba(255,99,132,1)',
                               borderWidth: 1
@@ -161,6 +173,9 @@
                             }
                         }
                     });
+
+          
+
             });
 
 
