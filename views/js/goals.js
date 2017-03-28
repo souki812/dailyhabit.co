@@ -118,9 +118,6 @@
                                   }, {
                                       x: updatedates[2],
                                       y: updatevalues[2]
-                                  }, {
-                                      x: updatedates[3],
-                                      y: updatevalues[3]
                                   }],
                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
                               borderColor: 'rgba(255,99,132,1)',
