@@ -104,7 +104,7 @@
 
                     var ctx = document.getElementById("myChart");
                     var myChart = new Chart(ctx, {
-                        type: 'bar',
+                        type: 'line',
                         data: {
                             
                         
@@ -120,6 +120,7 @@
                                       x: updatedates[2],
                                       y: updatevalues[2]
                                   }],
+                              fill:false,
                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
                               borderColor: 'rgba(255,99,132,1)',
                               borderWidth: 1
