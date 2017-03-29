@@ -111,9 +111,14 @@
                             datasets: [{
                               label: goal,
                               data: [{
-                                      x: updatedates,
-                                      y: updatevalues
-                                  
+                                      x: updatedates[0],
+                                      y: updatevalues[0]
+                                  }, {
+                                      x: updatedates[1],
+                                      y: updatevalues[1]
+                                  }, {
+                                      x: updatedates[2],
+                                      y: updatevalues[2]
                                   }],
                               fill:false,
                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
