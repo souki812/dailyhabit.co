@@ -165,9 +165,9 @@
                         }
                     });
 
-        jQuery.each(myChart.data.datasets, function() {
+        jQuery.each(ctx.data.datasets, function() {
           for (var index = 0; index < updatedates.length; ++index) {
-                    myChart.data.datasets[0].data.push({
+                    ctx.data.datasets[0].data.push({
                         x: updatedates[index],
                         y: updatevalues[index]
                     });
