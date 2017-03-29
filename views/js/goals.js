@@ -171,9 +171,7 @@
                         x: updatedates[index],
                         y: updatevalues[index]
                     });
-                }
-                window.myLine.update();
-            
+                }    
         });
 
           
