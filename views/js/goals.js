@@ -111,8 +111,8 @@
                             datasets: [{
                               label: goal,
                               data: [{
-                                      x: updatedates[0],
-                                      y: updatevalues[0]
+                                      x: updatedates,
+                                      y: updatevalues
                                   
                                   }],
                               fill:false,
