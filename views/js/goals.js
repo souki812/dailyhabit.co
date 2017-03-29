@@ -96,11 +96,7 @@
                               });
 
  
-                    console.log(updatevalues);
-                    console.log(updatedates);
-
-                    console.log(updatedates[0]);
-                    console.log(updatevalues[0]);
+              
 
                     var ctx = document.getElementById("myChart");
                     var myChart = new Chart(ctx, {
@@ -113,13 +109,9 @@
                               data: [{
                                       x: updatedates[0],
                                       y: updatevalues[0]
-                                  }, {
-                                      x: updatedates[1],
-                                      y: updatevalues[1]
-                                  }, {
-                                      x: updatedates[2],
-                                      y: updatevalues[2]
+                          
                                   }],
+
                               fill:false,
                               backgroundColor: 'rgba(255, 99, 132, 0.2)',
                               borderColor: 'rgba(255,99,132,1)',
@@ -172,6 +164,17 @@
                             }
                         }
                     });
+
+        jQuery.each(myChart.data.datasets, function() {
+          for (var index = 0; index < updatedates.length; ++index) {
+                    myChart.data.datasets.data.push({
+                        x: updatedates[index],
+                        y: updatevalues[index]
+                    });
+                }
+                window.myLine.update();
+            
+        });
 
           
 
