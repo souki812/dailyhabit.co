@@ -175,7 +175,8 @@
                         x: updatedates[index],
                         y: updatevalues[index]
                     });
-                }    
+                } 
+                myChart.update();   
         });
 
           
