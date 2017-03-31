@@ -98,8 +98,8 @@
  
               
 
-                    var ctx = document.getElementById("myChart");
-                    var myChart = new Chart(ctx, {
+                  
+                    var config = {
                         type: 'line',
                         data: {
                             
@@ -163,12 +163,15 @@
                               
                             }
                         }
-                    });
+                    };
 
-        console.log(ctx.data.datasets);
-        jQuery.each(ctx.data.datasets, function() {
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, config);
+
+        console.log(config.data.datasets);
+        jQuery.each(config.data.datasets, function() {
           for (var index = 0; index < updatedates.length; ++index) {
-                    ctx.data.datasets[0].data.push({
+                    config.data.datasets[0].data.push({
                         x: updatedates[index],
                         y: updatevalues[index]
                     });
