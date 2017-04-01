@@ -96,7 +96,12 @@
                               });
 
  
-              
+              function randomColorFactor() {
+                    return Math.round(Math.random() * 255);
+                    }
+              function randomColor(opacity) {
+                    return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+                  }
 
                   
                     var config = {
@@ -113,9 +118,7 @@
                                   }],
 
                               fill:false,
-                              backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                              borderColor: 'rgba(255,99,132,1)',
-                              borderWidth: 1
+                              
                             }],
 
                         },
@@ -168,7 +171,13 @@
         var ctx = document.getElementById("myChart");
         var myChart = new Chart(ctx, config);
 
-        console.log(config.data.datasets);
+       jQuery.each(config.data.datasets, function(i, dataset) {
+            dataset.borderColor = randomColor(0.4);
+            dataset.backgroundColor = randomColor(0.5);
+            dataset.pointBorderColor = randomColor(0.7);
+            dataset.pointBackgroundColor = randomColor(0.5);
+            dataset.pointBorderWidth = 1;
+        });
         jQuery.each(config.data.datasets, function() {
           for (var index = 0; index < updatedates.length; ++index) {
                     config.data.datasets[0].data.push({
