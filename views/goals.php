@@ -64,6 +64,7 @@
                             <th>Variable</th>
                             <th>Unit</th>
                             <th>Value</th>
+                            <th></th>
                          </tr>
                     <?php foreach ($current as $row): ?>
                     <tr>
@@ -71,11 +72,10 @@
                     <td> <?php echo htmlentities($row['variable'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['unit'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
-
+                     <td>
                     <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"><br> 
-
-                    </tr>         
+                    <input type="submit" name="delete" class="delete" value="delete"> </td>
+                    </tr>        
                     <?php endforeach; ?>
                 </table>
                 </form>
@@ -112,15 +112,23 @@
              
              <div class="type2">
                 <form action="goals.php" method="post">
+                    <table>
+                         <tr>
+                            <th>Value</th>
+                            <th>Date</th>
+                            <th></th>
+                           
+                         </tr>
                     <?php foreach ($update as $row): ?>
-                
-                    <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></h4>
-                  
-                    <input type="hidden" name="update_id" value="<?php echo $row['update_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"><br> 
-                            
+                    <tr>
+                    <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <input type="hidden" name="update_id" value="<?php echo $row['update_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"><br> </td>
+                   
+                    </tr>     
                     <?php endforeach; ?>
+                </table>
                 </form>
             </div>
 
