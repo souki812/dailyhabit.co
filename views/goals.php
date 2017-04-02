@@ -10,6 +10,22 @@
        
 
        <link rel="stylesheet" href="views/css/goals.css">
+       <style>
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid #ddd;
+            }
+
+            th, td {
+                border: none;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+</style>
     </head>
     <body>
         <div class="container">
@@ -40,14 +56,26 @@
             <div class="type2">
                 <canvas id="myChart" width="400" height="400"></canvas>
                 <form action="goals.php" method="post">
+
+
+                    <table>
+                         <tr>
+                            <th>Goal</th>
+                            <th>Variable</th>
+                            <th>Unit</th>
+                            <th>Value</th>
+                         </tr>
                     <?php foreach ($current as $row): ?>
-                    <h4> <?php echo htmlentities($row['goal'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['variable'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['unit'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <tr>
+                    <td> <?php echo htmlentities($row['goal'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <?php echo htmlentities($row['variable'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <?php echo htmlentities($row['unit'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
 
                     <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"><br>          
+                    <input type="submit" name="delete" class="delete" value="delete"><br> 
+
+                    </tr>         
                     <?php endforeach; ?>
                 </form>
             </div>
