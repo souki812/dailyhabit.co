@@ -54,7 +54,7 @@
             
             
             <div>
-                <canvas id="myChart" width="400" height="400"></canvas>
+                
                 <form action="goals.php" method="post">
 
 
@@ -79,6 +79,8 @@
                     <?php endforeach; ?>
                 </table>
                 </form>
+
+                <canvas id="myChart" width="400" height="400"></canvas>
             </div>
                 
             <div class="modal" id="modal3">
