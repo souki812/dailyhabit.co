@@ -77,6 +77,7 @@
 
                     </tr>         
                     <?php endforeach; ?>
+                </table>
                 </form>
             </div>
                 
