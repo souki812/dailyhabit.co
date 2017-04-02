@@ -53,7 +53,7 @@
             
             
             
-            <div class="type2">
+            <div>
                 <canvas id="myChart" width="400" height="400"></canvas>
                 <form action="goals.php" method="post">
 
@@ -110,19 +110,20 @@
              <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button><br>
 
              
-             <div class="type2">
+             <div>
                 <form action="goals.php" method="post">
                     <table>
                          <tr>
-                            <th>Value</th>
                             <th>Date</th>
+                            <th>Value</th>
                             <th></th>
                            
                          </tr>
                     <?php foreach ($update as $row): ?>
                     <tr>
-                    <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
+                    
                     <td> <input type="hidden" name="update_id" value="<?php echo $row['update_id']; ?>">
                     <input type="submit" name="delete" class="delete" value="delete"><br> </td>
                    
