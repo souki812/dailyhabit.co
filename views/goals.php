@@ -43,10 +43,8 @@
         <div class="row margintop" class="centertext">
             
             
-        
-
-            
-            
+        <!--Current Goal-->
+          <div class="col-md-6 comment">
             
             <div>
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button><br>
