@@ -44,10 +44,10 @@
             
             
         <!--Current Goal-->
-          <div class="col-md-6 comment">
+          <div class="col-md-4 comment">
             
             <div>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button><br>
+                
                 <form action="goals.php" method="post">
 
 
@@ -72,7 +72,7 @@
                     <?php endforeach; ?>
                 </table>
                 </form>
-
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
                 <canvas id="myChart" width="400" height="400"></canvas>
             </div>
                 
