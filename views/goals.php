@@ -43,18 +43,13 @@
         <div class="row margintop" class="centertext">
             
             
-        <!--Current Goal-->
-          <div class="col-md-4 comment">
-            <div class="form-group type1">
-                <label><h3 class="form-group words"><span class="glyphicon glyphicon-road goals"></span>Goals</h3></label>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button><br>
-            </div>
+        
 
             
             
             
             <div>
-                
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button><br>
                 <form action="goals.php" method="post">
 
 
