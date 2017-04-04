@@ -6,6 +6,22 @@
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="views/css/goals.css">
+         <style>
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid #ddd;
+            }
+
+            th, td {
+                border: none;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+</style>
     </head>
     <body>
         <div class="container">
@@ -25,21 +41,31 @@
             
         <!--Current Goal-->
           <div class="col-md-4 comment">
-            <div class="form-group type1">
-                <label><h3 class="form-group words"><span class="glyphicon glyphicon-road goals"></span> Current Goal:</h3></label>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button><br>
-            </div>
             
-            <div class="type2">
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button><br>
+           
+            
+            <div >
+
+                 <table>
+                         <tr>
+                            <th>Current Goal</th>
+                            <th>Number of Days</th>
+                            <th></th>
+                            
+                         </tr>
                 <form action="habits.php" method="post">
                     <?php foreach ($current as $row): ?>
-                    <h4> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4> <?php echo htmlentities($row['days'], ENT_QUOTES, 'utf-8'); ?></h4>
-
-                    <input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"><br>          
+                    <tr>
+                    <td> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></td>
+                    <td> <?php echo htmlentities($row['days'], ENT_QUOTES, 'utf-8'); ?></td>
+                   
+                    <td><input type="hidden" name="current_id" value="<?php echo $row['current_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"></td>
+                    </tr>         
                     <?php endforeach; ?>
                 </form>
+            </table>
             </div>
                 
             <div class="modal" id="modal3">
