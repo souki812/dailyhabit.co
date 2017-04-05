@@ -57,7 +57,7 @@
                             <th>Variable</th>
                             <th>Unit</th>
                             <th>Value</th>
-                            <th></th>
+                            <th> <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button></th>
                          </tr>
                     <?php foreach ($current as $row): ?>
                     <tr>
@@ -72,7 +72,7 @@
                     <?php endforeach; ?>
                 </table>
                 </form>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
+               
                 <canvas id="myChart" width="400" height="400"></canvas>
             </div>
                 
@@ -102,7 +102,7 @@
 
 
 
-             <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button><br>
+             
 
              
              <div>
@@ -111,7 +111,7 @@
                          <tr>
                             <th>Date</th>
                             <th>Value</th>
-                            <th></th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button></th>
                            
                          </tr>
                     <?php foreach ($update as $row): ?>
