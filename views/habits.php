@@ -91,19 +91,31 @@
         
         <!--Achieved Goals-->
         <div class="col-md-4 comment">
-                <div class="form-group type1">
-                    <label><h3 class="words"><span class="glyphicon glyphicon-thumbs-up goals"></span> Achieved Goals:</h3></label>
+                
                     <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button><br>
-                </div>
+                
                 
                 <div class="type2">
+
+                     <table>
+                         <tr>
+                            <th>Achieved Goals</th>
+                            <th></th>
+                        
+                            
+                         </tr>
                     <form action="habits.php" method="post">
                         <?php foreach ($achieved as $row): ?>
-                        <h4> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></h4>
+                        <tr>
+                        <td> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></td>
+                        <td>
                         <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
-                        <input type="submit" name="delete" class="delete" value="delete"><br>
+                        <input type="submit" name="delete" class="delete" value="delete"></td>
+                        </tr>
                         <?php endforeach; ?>
+
                     </form>
+                </table>
                 </div>
                     
                     
