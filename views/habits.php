@@ -20,7 +20,9 @@
                 padding: 8px;
             }
 
-            tr:nth-child(even){background-color: #f2f2f2}
+            tr:nth-child(even){background-color: #f2f2f2;
+
+            }
 </style>
     </head>
     <body>
@@ -95,7 +97,7 @@
                     <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button><br>
                 
                 
-                <div class="type2">
+                <div>
 
                      <table>
                          <tr>
