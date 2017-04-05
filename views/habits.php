@@ -44,7 +44,7 @@
         <!--Current Goal-->
           <div class="col-md-4 comment">
             
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button><br>
+                
            
             
             <div >
@@ -53,7 +53,7 @@
                          <tr>
                             <th>Current Goal</th>
                             <th>Number of Days</th>
-                            <th></th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button></th>
                             
                          </tr>
               
@@ -94,7 +94,7 @@
         <!--Achieved Goals-->
         <div class="col-md-4 comment">
                 
-                    <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button><br>
+                   
                 
                 
                 <div>
@@ -102,7 +102,7 @@
                      <table>
                          <tr>
                             <th>Achieved Goals</th>
-                            <th></th>
+                            <th> <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button></th>
                         
                             
                          </tr>
