@@ -48,7 +48,7 @@
            
             
             <div >
-
+                 <form action="habits.php" method="post">
                  <table>
                          <tr>
                             <th>Current Goal</th>
@@ -56,7 +56,7 @@
                             <th></th>
                             
                          </tr>
-                <form action="habits.php" method="post">
+              
                     <?php foreach ($current as $row): ?>
                     <tr>
                     <td> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></td>
@@ -98,7 +98,7 @@
                 
                 
                 <div>
-
+                <form action="habits.php" method="post">
                      <table>
                          <tr>
                             <th>Achieved Goals</th>
@@ -106,7 +106,7 @@
                         
                             
                          </tr>
-                    <form action="habits.php" method="post">
+                    
                         <?php foreach ($achieved as $row): ?>
                         <tr>
                         <td> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></td>
