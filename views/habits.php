@@ -142,18 +142,25 @@
         
         <!--Future Goals-->
         <div class="col-md-4 comment">
-             <div class="form-group type1">
-                <label><h3 class="words"><span class="glyphicon glyphicon-pushpin goals"></span> Future Goals:</h3></label>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button><br>
-            </div>
+             
                 
-            <div class="type2">
+            <div>
                 <form action="habits.php" method="post" >
+                    <table>
+                         <tr>
+                            <th>Achieved Goals</th>
+                            <th> <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button></th>
+                        
+                            
+                         </tr>
                     <?php foreach ($future as $row): ?>
-                    <h4> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"><br>
+                <tr>
+                    <td> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></td>
+                   <td> <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"></td>
+                </tr>
                     <?php endforeach; ?>
+                </table>
                 </form>
             </div>
                 
