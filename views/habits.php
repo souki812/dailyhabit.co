@@ -53,7 +53,7 @@
                          <tr>
                             <th>Current Goal</th>
                             <th>Number of Days</th>
-                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button></th>
+                            <th></th>
                             
                          </tr>
               
@@ -68,6 +68,7 @@
                     <?php endforeach; ?>
                 </form>
             </table>
+            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
             </div>
                 
             <div class="modal" id="modal3">
@@ -102,7 +103,7 @@
                      <table>
                          <tr>
                             <th>Achieved Goals</th>
-                            <th> <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button></th>
+                            <th> </th>
                         
                             
                          </tr>
@@ -118,6 +119,7 @@
 
                     </form>
                 </table>
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
                 </div>
                     
                     
@@ -143,7 +145,7 @@
         <!--Future Goals-->
         <div class="col-md-4 comment">
              
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
+               
             <div>
                 <form action="habits.php" method="post" >
                     <table>
@@ -162,6 +164,7 @@
                     <?php endforeach; ?>
                 </table>
                 </form>
+                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
             </div>
                 
                 
