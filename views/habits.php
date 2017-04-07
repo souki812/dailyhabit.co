@@ -143,21 +143,21 @@
         <!--Future Goals-->
         <div class="col-md-4 comment">
              
-                
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
             <div>
                 <form action="habits.php" method="post" >
                     <table>
                          <tr>
                             <th>Achieved Goals</th>
-                            <th> <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button></th>
+                            <th> </th>
                         
                             
                          </tr>
                     <?php foreach ($future as $row): ?>
                 <tr>
                     <td> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></td>
-                   <td> <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"></td>
+                    <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete">
                 </tr>
                     <?php endforeach; ?>
                 </table>
