@@ -20,7 +20,7 @@
                 padding: 8px;
             }
 
-            tr:td:nth-child(odd){background-color: #f2f2f2;
+            td:nth-child(odd){background-color: #f2f2f2;
 
             }
 </style>
