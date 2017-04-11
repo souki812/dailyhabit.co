@@ -48,7 +48,7 @@
            
             
             <div>
-                  <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
+                  
                  <form action="habits.php" method="post">
                   
                  <table>
@@ -72,6 +72,7 @@
             </table>
             
             </div>
+            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
                 
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
@@ -101,7 +102,7 @@
                 
                 
                 <div>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
+                
                 <form action="habits.php" method="post">
                      <table>
                          <tr>
@@ -126,6 +127,7 @@
                 </table>
                 
                 </div>
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
                     
                     
             <div class="modal" id="modal1">
@@ -152,7 +154,7 @@
              
                
             <div>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
+                
                 <form action="habits.php" method="post" >
                     <table>
                          <tr>
@@ -172,6 +174,7 @@
                 </form>
                  
             </div>
+            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
                 
                 
             <div class="modal" id="modal2">
