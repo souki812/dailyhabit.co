@@ -50,27 +50,29 @@
                 
                 <form action="goals.php" method="post">
 
-
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
                     <table>
                          <tr>
                             <th>Goal</th>
                             <th>Variable</th>
                             <th>Unit</th>
                             <th>Value</th>
-                            <th> <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button></th>
+                            <th></th>
+                            
                          </tr>
+
                     <?php foreach ($current as $row): ?>
                     <tr>
                     <td> <?php echo htmlentities($row['goal'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['variable'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['unit'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
-                     <td>
-                    <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete"> </td>
+                     <td></td>
                     </tr>        
                     <?php endforeach; ?>
                 </table>
+                <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete">
                 </form>
                
                 <canvas id="myChart" width="400" height="400"></canvas>

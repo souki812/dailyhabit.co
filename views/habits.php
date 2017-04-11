@@ -49,6 +49,7 @@
             
             <div >
                  <form action="habits.php" method="post">
+                    <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
                  <table>
                          <tr>
                             <th>Current Goal</th>
@@ -68,7 +69,7 @@
                     <?php endforeach; ?>
                 </form>
             </table>
-            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
+            
             </div>
                 
             <div class="modal" id="modal3">
@@ -109,11 +110,12 @@
                          </tr>
                     
                         <?php foreach ($achieved as $row): ?>
+                        <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
+                        <input type="submit" name="delete" class="delete" value="delete">
                         <tr>
                         <td> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></td>
                         <td>
-                        <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
-                        <input type="submit" name="delete" class="delete" value="delete"></td>
+                        </td>
                         </tr>
                         <?php endforeach; ?>
 
@@ -150,7 +152,7 @@
                 <form action="habits.php" method="post" >
                     <table>
                          <tr>
-                            <th>Achieved Goals</th>
+                            <th>Future Goals</th>
                             <th> </th>
                         
                             
