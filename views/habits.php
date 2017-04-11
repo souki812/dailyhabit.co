@@ -23,8 +23,9 @@
 
             tr:nth-child(even){background-color: #f2f2f2;
 
-        
-
+            }
+             #head {
+               background-color: #f2f2f2;
             }
 </style>
     </head>
@@ -55,7 +56,7 @@
                  
                   
                  <table>
-                         <tr>
+                         <tr id ="head">
                             <th>Current Goal</th>
                             <th>Number of Days</th>
                             <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button></th>
@@ -108,7 +109,7 @@
                 
                 
                      <table>
-                         <tr>
+                         <tr id ="head">
                             <th>Achieved Goals</th>
                             <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button> </th>
                         
@@ -160,7 +161,7 @@
                 
                 
                     <table>
-                         <tr>
+                         <tr id ="head">
                             <th>Future Goals</th>
                             <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button> </th>
                         

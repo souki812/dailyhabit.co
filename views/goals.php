@@ -24,7 +24,10 @@
                 padding: 8px;
             }
 
-            tr:nth-child(even){background-color: #f2f2f2}
+            tr:nth-child(odd){background-color: #f2f2f2;}
+            #head {
+               background-color: #f2f2f2 
+            }
 </style>
     </head>
     <body>
@@ -48,7 +51,7 @@
             
             <div>
                 <table>
-                         <tr>
+                         <tr id ="head">
                             <th>Goal</th>
                             <th>Variable</th>
                             <th>Unit</th>
@@ -65,12 +68,12 @@
                     <td> <?php echo htmlentities($row['variable'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['unit'], ENT_QUOTES, 'utf-8'); ?></td>
                     <td> <?php echo htmlentities($row['value'], ENT_QUOTES, 'utf-8'); ?></td>
-                     <td></td>
+                     <td> <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"></td>
                     </tr>        
                     <?php endforeach; ?>
                 </table>
-                <input type="hidden" name="goal_id" value="<?php echo $row['goal_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete">
+               
                 </form>
                
                 <canvas id="myChart" width="400" height="400"></canvas>
@@ -110,7 +113,7 @@
                 
                 
                     <table>
-                         <tr>
+                         <tr id ="head">
                             <th>Date</th>
                             <th>Value</th>
                             <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button></th>
