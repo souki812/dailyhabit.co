@@ -38,10 +38,7 @@
                 <h5 class="words"><?php echo htmlentities($currenthabit, ENT_QUOTES, 'utf-8'); ?></h5>
             </div>
 
-            <div class="form-group">
-                <label>Have you achieved today's Habit?</label>
-                <button class="btn btn-default firstbutton" id="target" type="button">Achieved</button>
-            </div>
+           
             </center>
         </div>
     </div>
