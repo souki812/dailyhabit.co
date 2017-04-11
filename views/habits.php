@@ -47,9 +47,10 @@
                 
            
             
-            <div >
+            <div>
+                  <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
                  <form action="habits.php" method="post">
-                    <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
+                  
                  <table>
                          <tr>
                             <th>Current Goal</th>
