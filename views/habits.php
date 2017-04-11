@@ -100,6 +100,7 @@
                 
                 
                 <div>
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
                 <form action="habits.php" method="post">
                      <table>
                          <tr>
@@ -121,7 +122,7 @@
 
                     </form>
                 </table>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
+                
                 </div>
                     
                     
@@ -149,6 +150,7 @@
              
                
             <div>
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
                 <form action="habits.php" method="post" >
                     <table>
                          <tr>
@@ -166,7 +168,7 @@
                     <?php endforeach; ?>
                 </table>
                 </form>
-                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
+                 
             </div>
                 
                 

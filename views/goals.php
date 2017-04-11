@@ -47,10 +47,8 @@
           <div class="col-md-4 comment">
             
             <div>
-                
-                <form action="goals.php" method="post">
-
                 <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
+                <form action="goals.php" method="post">
                     <table>
                          <tr>
                             <th>Goal</th>
@@ -108,12 +106,13 @@
 
              
              <div>
+                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button>
                 <form action="goals.php" method="post">
                     <table>
                          <tr>
                             <th>Date</th>
                             <th>Value</th>
-                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button></th>
+                            <th></th>
                            
                          </tr>
                     <?php foreach ($update as $row): ?>
