@@ -20,7 +20,11 @@
                 padding: 8px;
             }
 
-            td:nth-child(odd){background-color: #f2f2f2;
+            th:nth-child(even){background-color: #f2f2f2;
+
+            th {
+                background-color: #fff;
+            }
 
             }
 </style>
