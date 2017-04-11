@@ -24,7 +24,7 @@
                 padding: 8px;
             }
 
-            tr:nth-child(even){background-color: #f2f2f2}
+            tr:nth-child(odd){background-color: #f2f2f2}
 </style>
     </head>
     <body>
@@ -47,17 +47,17 @@
           <div class="col-md-4 comment">
             
             <div>
-                
-                <form action="goals.php" method="post">
-                    <table>
+                <table>
                          <tr>
                             <th>Goal</th>
                             <th>Variable</th>
                             <th>Unit</th>
                             <th>Value</th>
-                            <th></th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button></th>
                             
                          </tr>
+                <form action="goals.php" method="post">
+                    
 
                     <?php foreach ($current as $row): ?>
                     <tr>
@@ -75,7 +75,7 @@
                
                 <canvas id="myChart" width="400" height="400"></canvas>
             </div>
-            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
+            
                 
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
@@ -107,15 +107,16 @@
 
              
              <div>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button>
-                <form action="goals.php" method="post">
+                
+                
                     <table>
                          <tr>
                             <th>Date</th>
                             <th>Value</th>
-                            <th></th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal4">Update Progress</button></th>
                            
                          </tr>
+                    <form action="goals.php" method="post">
                     <?php foreach ($update as $row): ?>
                     <tr>
                     <td> <?php echo htmlentities($row['date'], ENT_QUOTES, 'utf-8'); ?></td>

@@ -18,13 +18,12 @@
                 border: none;
                 text-align: left;
                 padding: 8px;
+                
             }
 
-            th:nth-child(even){background-color: #f2f2f2;
+            th:nth-child(odd){background-color: #f2f2f2;
 
-            th {
-                background-color: #fff;
-            }
+        
 
             }
 </style>
