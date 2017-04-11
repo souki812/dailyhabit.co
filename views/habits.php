@@ -20,7 +20,7 @@
                 padding: 8px;
             }
 
-            tr:nth-child(odd){background-color: #f2f2f2;
+            tr:td:nth-child(odd){background-color: #f2f2f2;
 
             }
 </style>
@@ -103,15 +103,15 @@
                 
                 <div>
                 
-                <form action="habits.php" method="post">
+                
                      <table>
                          <tr>
                             <th>Achieved Goals</th>
-                            <th> </th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button> </th>
                         
                             
                          </tr>
-                    
+                        <form action="habits.php" method="post">
                         <?php foreach ($achieved as $row): ?>
                        
                         <tr>
@@ -127,7 +127,7 @@
                 </table>
                 
                 </div>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button>
+                
                     
                     
             <div class="modal" id="modal1">
@@ -155,14 +155,15 @@
                
             <div>
                 
-                <form action="habits.php" method="post" >
+                
                     <table>
                          <tr>
                             <th>Future Goals</th>
-                            <th> </th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button> </th>
                         
                             
                          </tr>
+                         <form action="habits.php" method="post" >
                     <?php foreach ($future as $row): ?>
                 <tr>
                     <td> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></td>
@@ -174,7 +175,7 @@
                 </form>
                  
             </div>
-            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button>
+            
                 
                 
             <div class="modal" id="modal2">
