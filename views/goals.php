@@ -47,7 +47,7 @@
           <div class="col-md-4 comment">
             
             <div>
-                <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
+                
                 <form action="goals.php" method="post">
                     <table>
                          <tr>
@@ -75,6 +75,7 @@
                
                 <canvas id="myChart" width="400" height="400"></canvas>
             </div>
+            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Enter New Goal</button>
                 
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
