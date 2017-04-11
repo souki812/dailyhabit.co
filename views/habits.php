@@ -49,16 +49,16 @@
             
             <div>
                   
-                 <form action="habits.php" method="post">
+                 
                   
                  <table>
                          <tr>
                             <th>Current Goal</th>
                             <th>Number of Days</th>
-                            <th></th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button></th>
                             
                          </tr>
-              
+                    <form action="habits.php" method="post">
                     <?php foreach ($current as $row): ?>
                     <tr>
                     <td> <?php echo htmlentities($row['current'], ENT_QUOTES, 'utf-8'); ?></td>
@@ -72,7 +72,7 @@
             </table>
             
             </div>
-            <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button>
+            
                 
             <div class="modal" id="modal3">
                 <div class="modal-dialog">
