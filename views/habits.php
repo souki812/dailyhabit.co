@@ -112,11 +112,12 @@
                          </tr>
                     
                         <?php foreach ($achieved as $row): ?>
-                        <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
-                        <input type="submit" name="delete" class="delete" value="delete">
+                       
                         <tr>
                         <td> <?php echo htmlentities($row['achieved'], ENT_QUOTES, 'utf-8'); ?></td>
                         <td>
+                             <input type="hidden" name="achieved_id" value="<?php echo $row['achieved_id']; ?>">
+                        <input type="submit" name="delete" class="delete" value="delete">
                         </td>
                         </tr>
                         <?php endforeach; ?>
@@ -163,8 +164,8 @@
                     <?php foreach ($future as $row): ?>
                 <tr>
                     <td> <?php echo htmlentities($row['future'], ENT_QUOTES, 'utf-8'); ?></td>
-                    <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
-                    <input type="submit" name="delete" class="delete" value="delete">
+                   <td> <input type="hidden" name="future_id" value="<?php echo $row['future_id']; ?>">
+                    <input type="submit" name="delete" class="delete" value="delete"></td>
                 </tr>
                     <?php endforeach; ?>
                 </table>
