@@ -6,6 +6,7 @@
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="views/css/community.css">
+   
     </head>
     <body>
         <div class="container">

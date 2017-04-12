@@ -5,7 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
+         <style type="text/css">
+
+
+            .wall{
+                    margin-top: 150px;
+                    border-top: 20px solid #000;
+                    border-bottom: 20px solid #000;
+                    font-family: Rockwell, serif;
+                }
+
+
+
+
+
+
+        </style>
          
     </head>
     <body>
@@ -21,7 +36,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <center>
-                <div class="community">
+                <div class="wall">
                     <h2><span class="glyphicon glyphicon-user top"></span> Community Wall</h2><br>
                 </div>
                 </center>
