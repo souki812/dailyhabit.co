@@ -31,6 +31,7 @@
                    <li <?php if ($_SERVER['REQUEST_URI'] == '/habits.php') echo 'class="active"'; ?>><a href="../habits.php">Habits</a></li>
                    <li <?php if ($_SERVER['REQUEST_URI'] == '/goals.php') echo 'class="active"'; ?>><a href="../goals.php">Goals</a></li>
                    <li <?php if ($_SERVER['REQUEST_URI'] == '/community.php') echo 'class="active"'; ?>><a href="../community.php">Community</a></li> 
+                   <li <?php if ($_SERVER['REQUEST_URI'] == '/wall.php') echo 'class="active"'; ?>><a href="../wall.php">Wall</a></li>
                 </ul>
                 
                 <form  class="navbar-form navbar-right">
