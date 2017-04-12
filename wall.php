@@ -28,5 +28,5 @@ $id = $_SESSION['user_id'];
 
 // Show whatever this activity is
 
-require('views/habits.php');
+require('views/wall.php');
 require('views/footer.php');
