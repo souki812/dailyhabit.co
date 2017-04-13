@@ -356,8 +356,8 @@ class User {
 		
 	}
 	
-	  function selectWall($id) {
-       return $this->db->query("select * from wall natural join users where user_id= '$id'  ORDER BY time DESC");
+	  function selectWall() {
+       return $this->db->query("select * from wall natural join users ORDER BY time DESC");
 		
 	}
 	 // Attempt to return the ID of this user

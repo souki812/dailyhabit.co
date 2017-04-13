@@ -60,7 +60,7 @@ $id = $_SESSION['user_id'];
 
          }
 
-$comments =  $user->selectWall($id);
+$comments =  $user->selectWall();
 $uploadimage = $user->selectAll($id);
 
 // Show whatever this activity is
