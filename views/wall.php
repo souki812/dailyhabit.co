@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DailyHabit</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="views/css/activity.css">
+        
          <style type="text/css">
 
 
@@ -15,6 +15,90 @@
                     border-bottom: 20px solid #000;
                     font-family: Rockwell, serif;
                 }
+
+                 .comment{
+        border: 1px solid grey;
+        background-color: #eeeeee;
+        margin-bottom: 20px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+    
+     .firstbutton{
+        margin-left: 280px;
+        margin-bottom: 20px;
+        border: #DC143C;
+        background-color: #DC143C;
+    }
+    
+    .secondbutton{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        float: right;
+        border: #DC143C;
+        background-color: #DC143C;
+        color: white;
+    }
+    
+    .secondbutton:hover {
+        border: #555555;
+        background-color: #555555;
+        color: white;
+    }
+    
+    
+    #profile-pic{
+         width:150px; /* you can use % */
+         height: 150px;
+         border: 2px solid grey;
+    }
+    
+    .col-xs-6 img[src=""] {
+        display: none;
+    }
+    
+    .circleBase {
+        border-radius: 50%;
+        }
+
+    .type1 {
+        /*background: url("views/images/manon.jpg");*/
+        margin-left: 310px;
+        margin-top: -100px;
+        border-radius: 50%/50%; 
+        width: 150px;
+        height: 150px;
+        border: 3px solid #000;
+    }
+    
+    .words {
+        margin:auto;
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+
+    .words {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+    
+    .add {
+        border: #DC143C;
+        background-color: #DC143C;
+        color: white;
+    }
+    
+    .add hover {
+        border: #555555;
+        background-color: #555555;
+        color: white;
+    }
+    
+    .delete {
+        float: right;
+        border: #DC143C;
+        background-color: #DC143C;
+        color: white;
+    }
 
         </style>
          
@@ -55,10 +139,10 @@
                 <form action="wall.php" method="post" class="well">
                  <form class="form">
                     <label >Comment</label>
-                    <textarea class="form-control" rows="5" id="comment"   name="newsfeed" autocomplete="off" autofocus>
+                    <textarea class="form-control" rows="5" id="comment"   name="wall" autocomplete="off" autofocus>
                        
                     </textarea>
-                    <input type="hidden" name="task" value="newsfeed">
+                    <input type="hidden" name="task" value="wall">
                     <button type="submit" class="btn btn-default add">Add</button>
                  </form>
                 </form>

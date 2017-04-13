@@ -40,6 +40,13 @@ class User {
 		$insert->bindParam(':friend_id', $id, PDO::PARAM_INT);
 		return $insert->execute();
 	}
+
+	function wall($comment, $id){
+		$insert = $this->db->prepare("insert into wall(comment,user_id) values(:comment,:user_id)");
+        $insert->bindParam(':comment', $comment, PDO::PARAM_STR);
+		$insert->bindParam(':user_id', $id, PDO::PARAM_INT);
+		return $insert->execute();
+	}
 	
 	function comment_friend($comment, $user_id, $friend_id){
 		$insert = $this->db->prepare("insert into newsfeed(comment,user_id,friend_id) values(:comment,:user_id,:friend_id)");
@@ -51,6 +58,12 @@ class User {
 	
 	function remove_comment($comment_id){
 		$delete = $this->db->prepare('delete from newsfeed where comment_id= :comment_id');
+		$delete->bindParam(':comment_id', $comment_id, PDO::PARAM_INT);
+		$delete->execute();
+	}
+
+	function remove_post($comment_id){
+		$delete = $this->db->prepare('delete from wall where comment_id= :comment_id');
 		$delete->bindParam(':comment_id', $comment_id, PDO::PARAM_INT);
 		$delete->execute();
 	}
@@ -343,6 +356,10 @@ class User {
 		
 	}
 	
+	  function selectWall($id) {
+       return $this->db->query("select * from wall natural join users where user_id= '$id'  ORDER BY time DESC");
+		
+	}
 	 // Attempt to return the ID of this user
     function selectComments($id) {
        return $this->db->query("select * from users join newsfeed on users.user_id= newsfeed.friend_id where newsfeed.user_id= '$id' ORDER BY time ASC");

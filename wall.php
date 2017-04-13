@@ -25,14 +25,14 @@ $id = $_SESSION['user_id'];
 
 
       //Add a comment
-            if ($_POST['task'] == 'newsfeed') {
-                $success = $user->newsfeed( $_POST['newsfeed'], $id);
+            if ($_POST['task'] == 'wall') {
+                $success = $user->wall( $_POST['wall'], $id);
             }
        
         
         if (isset($_POST['comment_id'])) {
             //Remove comment
-            $success= $user->remove_comment( $_POST['comment_id']);
+            $success= $user->remove_post( $_POST['comment_id']);
         }
         
         if(isset($_POST['profile']))
@@ -60,7 +60,8 @@ $id = $_SESSION['user_id'];
 
          }
 
-
+$comments =  $user->selectWall($id);
+$uploadimage = $user->selectAll($id);
 
 // Show whatever this activity is
 

@@ -23,7 +23,7 @@ $id = $_SESSION['user_id'];
       require_once('models/user.php');
       $user = new User($db);
 
-        echo "inside else";
+        
         
         if (isset($_POST['task'])) {
                    
