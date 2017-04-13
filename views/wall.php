@@ -155,7 +155,7 @@
 <div class="container page">
     
  <div class="row">
-    <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
+   
    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="wall.php" method="post" >
@@ -175,7 +175,7 @@
 
         </div>
             <?php endforeach; ?>
-            
+             <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
  </div>
 </div>
 
