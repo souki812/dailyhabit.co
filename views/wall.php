@@ -11,8 +11,7 @@
 
             .wall{
                     margin-top: 150px;
-                    border-top: 20px solid #000;
-                    border-bottom: 20px solid #000;
+                   
                     font-family: Rockwell, serif;
                 }
 
@@ -116,9 +115,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <center>
-                
+                <div class="wall">
                     <h2><span class="glyphicon glyphicon-user top"></span> Community Wall</h2><br>
-                
+                </div>
                 </center>
             </div>
         </div>
