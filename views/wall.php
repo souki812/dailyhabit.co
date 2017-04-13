@@ -164,7 +164,7 @@
                     <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                     <label>
                     <h4 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h4>
-                    <h4 class="text"><?php echo date(("F j, Y, g:i a"), $row['time']); ?></h4>
+                    <h4 class="text"><?php echo date(("F j, Y, g:i a"), strtotime($row['time']); ?></h4>
                     </label>
                 </div>
                 
