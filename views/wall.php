@@ -19,7 +19,7 @@
         border: 1px solid grey;
         background-color: #eeeeee;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        width: 200px;
+        width: 400px;
         height: 100px;
     }
     
