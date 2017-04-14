@@ -20,6 +20,7 @@
         border-radius: 5px;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
         height: 45px;
+        margin-bottom: 1px;
        
     }
     
