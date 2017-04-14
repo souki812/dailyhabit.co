@@ -29,15 +29,7 @@
         background-color: #DC143C;
     }
     
-    .secondbutton{
-        margin-right: 20px;
-        margin-bottom: 20px;
-        display: inline-block;
-        float: right;
-        border: #DC143C;
-        background-color: #DC143C;
-        color: white;
-    }
+   
     
     .secondbutton:hover {
         border: #555555;
