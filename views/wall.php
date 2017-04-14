@@ -48,8 +48,8 @@
     
     
     #profile-pic{
-         width:150px; /* you can use % */
-         height: 150px;
+         width:50px; /* you can use % */
+         height: 50px;
          border: 2px solid grey;
     }
     
@@ -72,8 +72,7 @@
     
     .words {
         margin:auto;
-        margin-left: 25px;
-        margin-top: 30px;
+        
     }
 
     .words {
