@@ -18,7 +18,7 @@
                  .comment{
         border: 1px solid grey;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        height: 100px;
+        height: 80px;
        
     }
     
@@ -156,11 +156,12 @@
                     <h5 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h5>
                     <h4 class="text"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h4>
                     </label>
+                      <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
+                     <input type="submit" name="delete" class="delete" value="delete">
                 </div>
                 
             
-            <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
-            <input type="submit" name="delete" class="delete" value="delete">
+          
             </form>
 
 
