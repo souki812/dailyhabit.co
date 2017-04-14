@@ -19,6 +19,8 @@
         border: 1px solid grey;
         background-color: #eeeeee;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        width: 100px;
+        height: 50px;
     }
     
      .firstbutton{
@@ -65,7 +67,6 @@
         margin-top: -100px;
         border-radius: 50%/50%; 
         width: 150px;
-        
         border: 3px solid #000;
     }
     
@@ -166,7 +167,7 @@
                     </label>
                 </div>
                 
-            <h5><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
+            <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
             <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
             <input type="submit" name="delete" class="delete" value="delete">
             </form>
