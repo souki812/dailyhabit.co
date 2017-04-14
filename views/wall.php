@@ -18,7 +18,7 @@
                  .comment{
         border: 1px solid grey;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        height: 80px;
+        height: 60px;
        
     }
     
@@ -151,10 +151,10 @@
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="wall.php" method="post" >
                 <div class="form-group">
-                    <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                    <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="img-circle" width="40" height="40"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
                     <label>
-                    <h5 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h5>
-                    <h4 class="text"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h4>
+                    <h5 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?>: <?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
+                    
                     </label>
                       <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
                      <input type="submit" name="delete" class="delete" value="delete">
