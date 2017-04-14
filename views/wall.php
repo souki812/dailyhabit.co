@@ -18,7 +18,7 @@
                  .comment{
         border: 1px solid grey;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        height: 60px;
+        height: 50px;
        
     }
     
@@ -86,7 +86,6 @@
     .delete {
         float: right;
         border: #DC143C;
-        background-color: #DC143C;
         color: white;
     }
 
