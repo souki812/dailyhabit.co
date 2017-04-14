@@ -88,7 +88,7 @@
             });
 
 
-                                 $.ajax({
+                  $.ajax({
                          type: 'POST',
                          async: false,
                          url: 'loadcalendar.php',
