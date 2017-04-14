@@ -19,8 +19,8 @@
         border: 1px solid grey;
         background-color: #eeeeee;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        width: 400px;
-        height: 100px;
+        width: 600px;
+        height: 50px;
     }
     
      .firstbutton{
