@@ -18,7 +18,7 @@
                  .comment{
         border: 1px solid grey;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        height: 50px;
+        height: 40px;
        
     }
     
