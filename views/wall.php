@@ -19,8 +19,7 @@
         border: 1px solid grey;
         background-color: #eeeeee;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        width: 600px;
-        height: 50px;
+       
     }
     
      .firstbutton{
@@ -48,8 +47,8 @@
     
     
     #profile-pic{
-         width:50px; /* you can use % */
-         height: 50px;
+         width:150px; /* you can use % */
+         height: 150px;
          border: 2px solid grey;
     }
     
@@ -72,7 +71,8 @@
     
     .words {
         margin:auto;
-        
+        margin-left: 25px;
+        margin-top: 30px;
     }
 
     .words {
