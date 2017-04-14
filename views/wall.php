@@ -21,27 +21,6 @@
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
        
     }
-
-    table {
-                border-collapse: collapse;
-                border-spacing: 0;
-                width: 100%;
-                border: 1px solid #ddd;
-            }
-
-            th, td {
-                border: none;
-                text-align: left;
-                padding: 8px;
-                
-            }
-
-            tr:nth-child(even){background-color: #f2f2f2;
-
-            }
-             #head {
-               background-color: #f2f2f2;
-            }
     
      .firstbutton{
         margin-left: 280px;
@@ -68,7 +47,8 @@
     
     
     #profile-pic{
-        
+         width:150px; /* you can use % */
+         height: 150px;
          border: 2px solid grey;
     }
     
@@ -174,30 +154,26 @@
 <div class="container page">
     
  <div class="row">
-   <table>
+   
    <?php foreach ($comments as $row): ?>
         <div class="col-md-9 col-md-offset-2  comment" >
             <form action="wall.php" method="post" >
+                <div class="form-group">
+                    <img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';">
+                    <label>
+                    <h6 class="text"><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></h6>
+                    <h6 class="text"><?php echo date(("F j, Y, g:i a"), strtotime($row['time'])); ?></h6>
+                    </label>
+                </div>
                 
-
-                    
-                         <tr id ="head">
-                            <th><img src="/views/uploads/<?php echo htmlentities($row['picture'], ENT_QUOTES, 'utf-8'); ?>"  class="img-circle" width="70" height="70"  onerror="if (this.src != 'views/images/no_photo.png') this.src = 'views/images/no_photo.png';"></th>
-                            <th><?php echo htmlentities($row['first'], ENT_QUOTES, 'utf-8'); ?>  <?php echo htmlentities($row['last'], ENT_QUOTES, 'utf-8'); ?></th>   
-                         </tr>
-                        <tr>
-                            <td><?php echo date(("F j, Y, g:i a"), strtotime($row['time'])); ?></td>
-                        </tr>
-                        <tr><td><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></td>
-                            <td><input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
-                                <input type="submit" name="delete" class="delete" value="delete"></td></tr>
-                   
-
-            </table>
+            <h5 class="words"><?php echo htmlentities($row['comment'], ENT_QUOTES, 'utf-8'); ?></h5>
+            <input type="hidden" name="comment_id" value="<?php echo $row['comment_id']; ?>">
+            <input type="submit" name="delete" class="delete" value="delete">
             </form>
-        
-            <?php endforeach; ?>
+
+
         </div>
+            <?php endforeach; ?>
              <button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Post a comment</button>
  </div>
 </div>
