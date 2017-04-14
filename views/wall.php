@@ -16,9 +16,10 @@
                 }
 
                  .comment{
-        border: 1px solid grey;
+        border: 1px solid;
+        border-radius: 5px;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        height: 40px;
+        height: 45px;
        
     }
     
