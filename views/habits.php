@@ -57,9 +57,9 @@
                   
                  <table>
                          <tr id ="head">
-                            <th>Current Goal</th>
+                            <th>Current Habit</th>
                             <th>Number of Days</th>
-                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Goal</button></th>
+                            <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal3" >Edit Habit</button></th>
                             
                          </tr>
                     <form action="habits.php" method="post">
@@ -110,7 +110,7 @@
                 
                      <table>
                          <tr id ="head">
-                            <th>Achieved Goals</th>
+                            <th>Achieved Habits</th>
                             <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal1" >Edit List</button> </th>
                         
                             
@@ -162,7 +162,7 @@
                 
                     <table>
                          <tr id ="head">
-                            <th>Future Goals</th>
+                            <th>Future Habits</th>
                             <th><button  class="btn btn-default secondbutton" data-toggle="modal" data-target="#modal2" >Edit List</button> </th>
                         
                             
