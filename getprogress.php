@@ -15,7 +15,7 @@ require_once('models/user.php');
 $user = new User($db);
       
 $id = $_SESSION['user_id'];      
-$val = $_POST['val'] ;
+$val = $_POST['val'];
 $days = $user->getcurrentdays($id);
 $habit_id = $user->gethabitid($id);
 $count = $user->countdate($id, $habit_id);
@@ -24,7 +24,7 @@ $count = $user->countdate($id, $habit_id);
        exit();
  }else{
       $val = ceil(($count/$days)*100);
-     
+      alert($val);
       echo $val;
  }
 
