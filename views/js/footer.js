@@ -63,6 +63,7 @@
                                     data: { moment:moment },
                                     success: function(response) {
                                           moment = response;
+                                          alert(moment);
                                                
                                     }
                               });
