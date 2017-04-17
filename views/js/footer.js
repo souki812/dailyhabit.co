@@ -52,7 +52,7 @@
 
                               
                               $(this).css('background-color', 'green');
-                              alert("outside" + moment);
+                            
                               
                                
                                $.ajax({
