@@ -51,12 +51,12 @@
                               var moment = date.format('YYYY-MM-DD');
 
                               
-                              $(this).css('background-color', 'red');
+                              $(this).css('background-color', 'green');
                               alert("outside" + moment);
                               
                                
                                $.ajax({
-                                    alert("inside" + moment);
+                                    
                                     type: 'POST',
                                     async: false,
                                     url: 'calendar.php',
