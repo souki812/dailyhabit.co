@@ -57,7 +57,6 @@
                                
                                $.ajax({
                                     type: 'POST',
-                                    async: false,
                                     url: 'calendar.php',
                                     data: { moment:moment },
                                     success: function(response) {
