@@ -51,11 +51,11 @@
 
                         dayClick: function(date, jsEvent, view) {
                               moment = date.format('YYYY-MM-DD');
-                              
+
                               
                               $(this).css('background-color', 'green');
                             
-                              alert(moment);
+                              
                                
                                $.ajax({
                                     
@@ -65,7 +65,7 @@
                                     data: { moment:moment },
                                     success: function(response) {
                                           moment = response;
-                                          
+
                                         
                                                
                                     }
