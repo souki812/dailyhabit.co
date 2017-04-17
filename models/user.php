@@ -72,8 +72,9 @@ class User {
 	function insert_date($date, $user_id, $habit_id){
 		$insert = $this->db->prepare("insert into dates(date,user_id,habit_id) values(:date,:user_id,:habit_id)");
         $insert->bindParam(':date', $date, PDO::PARAM_STR);
+        $insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $insert->bindParam(':habit_id', $habit_id, PDO::PARAM_INT);
-		$insert->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		
 		return $insert->execute();
 	}
 	
