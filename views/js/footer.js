@@ -57,11 +57,11 @@
                                
                                $.ajax({
                                     type: 'POST',
+                                    async: false,
                                     url: 'calendar.php',
                                     data: { moment:moment },
                                     success: function(response) {
                                           moment = response;
-                                          alert(moment);
                                                
                                     }
                               });
@@ -112,8 +112,13 @@
 
                                           }
                                             
-                        },
-                 
+                        }
+                     /**   viewRender: function(view){
+                              maxDate = new Date();
+                              if (view.start > maxDate){
+                                  $('#calendar').fullCalendar('gotoDate', maxDate);
+                                  }
+                                }, **/
                   }); 
              
                                                
