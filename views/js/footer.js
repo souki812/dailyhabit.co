@@ -18,6 +18,7 @@
 
             $.ajax({
                   type: 'POST',
+                  async: false,
                   url: 'getprogress.php',
                   data: { val:val },
                   success: function(response) {
