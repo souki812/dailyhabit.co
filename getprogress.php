@@ -24,7 +24,6 @@ $count = $user->countdate($id, $habit_id);
        exit();
  }else{
       $val = ceil(($count/$days)*100);
-      alert($val);
       echo $val;
  }
 

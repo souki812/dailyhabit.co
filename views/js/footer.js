@@ -113,12 +113,7 @@
                                           }
                                             
                         },
-                     /**   viewRender: function(view){
-                              maxDate = new Date();
-                              if (view.start > maxDate){
-                                  $('#calendar').fullCalendar('gotoDate', maxDate);
-                                  }
-                                }, **/
+                 
                   }); 
              
                                                
