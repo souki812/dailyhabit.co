@@ -60,5 +60,5 @@ $update =  $user->selectUpdate( $id);
 
 
 require('views/goals.php');
-
+require('views/footer.php');
 
