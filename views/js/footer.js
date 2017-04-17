@@ -51,7 +51,7 @@
                               var moment = date.format('YYYY-MM-DD');
 
                               
-                              $(this).css('background-color', 'green');
+                              $(this).css('background-color', 'red');
                               alert("outside" + moment);
                               
                                
