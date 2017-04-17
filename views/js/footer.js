@@ -1,6 +1,7 @@
  $(document).ready(function() {
       var val = 0;
       var dbdates = new Array();
+      var moment = 0;
    
       
                   $.ajax({
@@ -49,7 +50,7 @@
 
 
                         dayClick: function(date, jsEvent, view) {
-                              var moment = date.format('YYYY-MM-DD');
+                              moment = date.format('YYYY-MM-DD');
 
                               
                               $(this).css('background-color', 'green');
@@ -64,7 +65,8 @@
                                     data: { moment:moment },
                                     success: function(response) {
                                           moment = response;
-                                          alert(response);
+                                          alert(moment);
+                                        
                                                
                                     }
                               });
