@@ -52,10 +52,11 @@
 
                               
                               $(this).css('background-color', 'green');
-
+                              alert("outside" + moment);
                               
                                
                                $.ajax({
+                                    alert("inside" + moment);
                                     type: 'POST',
                                     async: false,
                                     url: 'calendar.php',
